@@ -1,0 +1,26 @@
+.block a, body a {
+  font-size: 32px;
+  color: rgb(0, 100, 94);
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.block a:hover, body a:hover {
+  color: rgb(180, 180, 180);
+}
+
+body {
+  color: aqua;
+  background-color: royalblue;
+}
+body span {
+  display: inline-block;
+  padding: 20px;
+  margin-top: 100px;
+  border: 1px solid rgb(236, 64, 30);
+  border-radius: 7px;
+}
+.block h2 {
+  font-size: 36px;
+  color: rgb(236, 64, 30);
+}

@@ -1,0 +1,44 @@
+$color_prime: rgb(236, 64, 30);
+$font-size_headers: 36px;
+
+@mixin rulesforlink($font_size, $color_text){
+  font-size: $font_size;
+  color: $color_text;
+}
+
+%link_style{
+  @include rulesforlink(32px, rgb(0, 100, 94));
+  text-decoration: none;
+  transition: all .3s;
+  &:hover{
+    color: rgb(180, 180, 180);
+  }
+}
+
+
+body{
+	color: aqua;
+	background-color: royalblue;
+	span{
+		display: inline-block;
+		padding: 20px;
+		margin-top: 100px;
+		border: 1px solid $color_prime;
+		border-radius: 7px;
+	}
+  a{
+    @extend %link_style;
+  }
+
+	
+}
+.block{
+  
+  h2{
+    font-size: $font-size_headers;
+    color: $color_prime;
+  }
+  a{
+    @extend %link_style;
+  }
+}
