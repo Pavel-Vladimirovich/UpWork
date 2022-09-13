@@ -1,0 +1,40 @@
+body {
+  background: #001731 !important;
+  font-family: "Gilroy";
+  font-style: normal;
+}
+$primary-color: #ffffff;
+// стилизация button
+%btn-style {
+  color: $primary-color;
+  background: #398bff;
+  border-radius: 4px;
+  &:hover{
+    background: rgba(44, 130, 253, 0.15);
+    color: #398BFF;  
+  }
+}
+
+.container-fluid {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
+  & .nav-item {
+    padding-left: 24px;
+    a {
+      color: $primary-color;
+    }
+  }
+
+  form {
+    padding: 21px 28px 0px 0px;
+  }
+  
+  .btn-outline-success {
+    border: none;
+    padding: 8px 12px;
+    margin-left: 8px;
+    @extend %btn-style
+  }
+}

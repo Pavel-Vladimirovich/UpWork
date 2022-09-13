@@ -1,10 +1,36 @@
 body {
-  background-color: #001731 !important;
+  background: #001731 !important;
+  font-family: "Gilroy";
+  font-style: normal;
 }
 
-.navbar {
-  background: #001731;
+.container-fluid .btn-outline-success {
+  color: #ffffff;
+  background: #398bff;
+  border-radius: 4px;
 }
-.navbar a {
-  color: #FFFFFF;
+.container-fluid .btn-outline-success:hover {
+  background: rgba(44, 130, 253, 0.15);
+  color: #398BFF;
+}
+
+.container-fluid {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
+}
+.container-fluid .nav-item {
+  padding-left: 24px;
+}
+.container-fluid .nav-item a {
+  color: #ffffff;
+}
+.container-fluid form {
+  padding: 21px 28px 0px 0px;
+}
+.container-fluid .btn-outline-success {
+  border: none;
+  padding: 8px 12px;
+  margin-left: 8px;
 }
