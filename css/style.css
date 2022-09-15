@@ -52,11 +52,16 @@ body {
   gap: 8px;
 }
 .container-fluid .btn-navbar select {
+  position: relative;
   margin-right: 40px;
-  border: none;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
   background: none;
   color: #ffffff;
 }
 .container-fluid .btn-navbar select option {
+  position: absolute;
+  top: 120px;
+  left: 10px;
   background: #001731;
 }
