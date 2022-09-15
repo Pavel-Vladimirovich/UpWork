@@ -8,25 +8,36 @@ body {
   height: 100vh;
   background: #001731 !important;
   font-family: "Gilroy";
+  color: #ffffff;
   font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
 }
 
-.container-fluid .btn-primary {
+.section__hero .container .hero__btns .hero__btn.btn-primary, .container-fluid .btn-primary {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.01em;
   color: #ffffff;
   background: #398bff;
+  border: 3px solid rgba(0, 105, 253, 0.752);
   border-radius: 4px;
-  border: 3px solid rgba(44, 130, 253, 0.2);
 }
-.container-fluid .btn-primary:hover {
+.section__hero .container .hero__btns .hero__btn.btn-primary:hover, .container-fluid .btn-primary:hover {
   background: #1760c5;
 }
 
-.container-fluid .btn-secondary {
-  color: #398BFF;
+.section__hero .container .hero__btns .hero__btn.btn-secondary, .container-fluid .btn-secondary {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  color: #398bff;
   background: rgba(44, 130, 253, 0.15);
   border: none;
 }
-.container-fluid .btn-secondary:hover {
+.section__hero .container .hero__btns .hero__btn.btn-secondary:hover, .container-fluid .btn-secondary:hover {
   background: #1760c5;
   color: #ffffff;
 }
@@ -64,4 +75,35 @@ body {
   top: 120px;
   left: 10px;
   background: #001731;
+}
+.section__hero .container {
+  margin: 114px 0px 0px 120px;
+  max-width: 715px;
+}
+.section__hero .container .hero__title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 95%;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 34px;
+}
+.section__hero .container .hero__btns {
+  margin-bottom: 34px;
+}
+.section__hero .container .hero__btns span {
+  margin: 0px 14px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 145%;
+  color: rgba(255, 255, 255, 0.35);
+}
+.section__hero .container .hero__btns .hero__btn {
+  padding: 15px 22px;
+}
+.section__hero .container .hero__text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 145%;
+  color: #aac0e0;
 }
