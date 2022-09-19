@@ -15,7 +15,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-.section__hero .container .hero__btns .hero__btn.btn-primary, .container-fluid .btn-primary {
+.section__hero .container__hero .hero__btns .hero__btn.btn-primary, .container-fluid .btn-primary {
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.01em;
@@ -24,11 +24,11 @@ body {
   border: 3px solid rgba(0, 105, 253, 0.752);
   border-radius: 4px;
 }
-.section__hero .container .hero__btns .hero__btn.btn-primary:hover, .container-fluid .btn-primary:hover {
+.section__hero .container__hero .hero__btns .hero__btn.btn-primary:hover, .container-fluid .btn-primary:hover {
   background: #1760c5;
 }
 
-.section__hero .container .hero__btns .hero__btn.btn-secondary, .container-fluid .btn-secondary {
+.section__hero .container__hero .hero__btns .hero__btn.btn-secondary, .container-fluid .btn-secondary {
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.01em;
@@ -36,35 +36,53 @@ body {
   background: rgba(44, 130, 253, 0.15);
   border: none;
 }
-.section__hero .container .hero__btns .hero__btn.btn-secondary:hover, .container-fluid .btn-secondary:hover {
+.section__hero .container__hero .hero__btns .hero__btn.btn-secondary:hover, .container-fluid .btn-secondary:hover {
   background: #1760c5;
   color: #ffffff;
 }
 
 .header-wrapper {
   background: #001731;
-  width: 100%;
+  min-width: 100%;
   min-height: 900px;
   position: relative;
   overflow: hidden;
 }
-.header-wrapper .header-ellips {
+@media (max-width: 1470px) {
+  .header-wrapper .header-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.header-wrapper .hero__ellips {
   position: absolute;
   right: 200px;
   bottom: 0px;
   opacity: 0.75;
   max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right top;
-     object-position: right top;
 }
-.header-wrapper .header-screen {
+@media (max-width: 1470px) {
+  .header-wrapper .hero__ellips {
+    right: 0px;
+    bottom: -60px;
+  }
+}
+.header-wrapper .hero__screen {
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
   z-index: 3;
+  max-width: 645px;
+}
+@media (max-width: 1470px) {
+  .header-wrapper .hero__screen {
+    max-width: 400px;
+  }
 }
 
 .container-fluid {
@@ -105,11 +123,17 @@ body {
   position: relative;
   z-index: 2;
 }
-.section__hero .container {
-  margin: 114px 0px 0px 120px;
-  max-width: 715px;
+.section__hero .container__hero {
+  margin-top: 114px;
+  margin-left: 120px;
+  max-width: 745px;
 }
-.section__hero .container .hero__title {
+@media (max-width: 992px) {
+  .section__hero .container__hero {
+    margin: calc(20px + 94 * (100vw - 320px) / 672);
+  }
+}
+.section__hero .container__hero .hero__title {
   font-weight: 700;
   font-size: 72px;
   line-height: 95%;
@@ -117,22 +141,51 @@ body {
   color: #ffffff;
   margin-bottom: 34px;
 }
-.section__hero .container .hero__btns {
+@media (max-width: 992px) {
+  .section__hero .container__hero .hero__title {
+    font-size: calc(30px + 42 * (100vw - 320px) / 672);
+    line-height: 100%;
+    margin-bottom: 14px;
+  }
+}
+.section__hero .container__hero .hero__btns {
   margin-bottom: 34px;
 }
-.section__hero .container .hero__btns span {
+@media (max-width: 450px) {
+  .section__hero .container__hero .hero__btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+.section__hero .container__hero .hero__btns span {
   margin: 0px 14px;
   font-weight: 400;
   font-size: 20px;
   line-height: 145%;
   color: rgba(255, 255, 255, 0.35);
 }
-.section__hero .container .hero__btns .hero__btn {
+@media (max-width: 450px) {
+  .section__hero .container__hero .hero__btns span {
+    margin: 10px 0px;
+  }
+}
+.section__hero .container__hero .hero__btns .hero__btn {
   padding: 15px 22px;
 }
-.section__hero .container .hero__text {
+.section__hero .container__hero .hero__text {
   font-weight: 400;
   font-size: 22px;
   line-height: 145%;
   color: #aac0e0;
+}
+@media (max-width: 992px) {
+  .section__hero .container__hero .hero__text {
+    font-size: calc(14px + 8 * (100vw - 320px) / 672);
+  }
 }

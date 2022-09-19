@@ -45,35 +45,39 @@ $secondary-color-hover: #1760c5;
 }
 
 // ========================navbar========================================
-.header-wrapper{
+.header-wrapper {
   background: #001731;
-  width: 100%;
+  min-width: 100%;
   min-height: 900px;
   position: relative;
   overflow: hidden;
-  & .header-ellips {
+  @media (max-width: 1470px) {
+    .header-wrapper{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  & .hero__ellips {
     position: absolute;
     right: 200px;
     bottom: 0px;
     opacity: 0.75;
-    // border: 1px solid red;
     max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    object-position: right top;
+    // max-height: 100%;
+    @media (max-width: 1470px){
+      right: 0px;
+      bottom: -60px;
+    }
   }
-  & .header-screen {
+  & .hero__screen {
     position: absolute;
-    right: 0px;
-    bottom: 0px;
+    right: 0;
+    bottom: 0;
     z-index: 3;
-    // border: 1px solid red;
-    // width: 745px;
-    // height: 660px;
-    // width:300px;
-    // height:150px;
-    // object-fit:cover;
-    // object-position: right center;
+    max-width: 645px;
+    @media (max-width: 1470px) {
+      max-width: 400px;
+    }
   }
 }
 .container-fluid {
@@ -106,10 +110,6 @@ $secondary-color-hover: #1760c5;
         top: 120px;
         left: 10px;
         background: #001731;
-
-        &:focus {
-          //  border: none
-        }
       }
     }
   }
@@ -125,9 +125,14 @@ $secondary-color-hover: #1760c5;
 .section__hero {
   position: relative;
   z-index: 2;
-  .container {
-    margin: 114px 0px 0px 120px;
-    max-width: 715px;
+  .container__hero {
+    // border: 1px solid red;
+    margin-top: 114px;
+    margin-left: 120px;
+    max-width: 745px;
+    @media (max-width: 992px) {
+      margin: calc(20px + (114 - 20) * ((100vw - 320px) / (992 - 320)));
+    }
     .hero__title {
       font-weight: 700;
       font-size: 72px;
@@ -135,15 +140,30 @@ $secondary-color-hover: #1760c5;
       letter-spacing: -0.03em;
       color: #ffffff;
       margin-bottom: 34px;
+      @media (max-width: 992px) {
+        font-size:calc(30px + (72 - 30) * ((100vw - 320px) / (992 - 320)));
+        line-height: 100%;
+        margin-bottom: 14px;
+      }
     }
     .hero__btns {
+      // border: 1px solid red;
       margin-bottom: 34px;
+      @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
       & span {
         margin: 0px 14px;
         font-weight: 400;
         font-size: 20px;
         line-height: 145%;
         color: rgba(255, 255, 255, 0.35);
+        @media (max-width: 450px) {
+          margin: 10px 0px;
+        }
+
       }
       .hero__btn {
         padding: 15px 22px;
@@ -160,6 +180,11 @@ $secondary-color-hover: #1760c5;
       font-size: 22px;
       line-height: 145%;
       color: #aac0e0;
+      @media (max-width: 992px) {
+        font-size:calc(14px + (22 - 14) * ((100vw - 320px) / (992 - 320)));
+      }
     }
   }
 }
+
+
