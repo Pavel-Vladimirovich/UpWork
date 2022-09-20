@@ -43,7 +43,7 @@ body {
 
 .header-wrapper {
   background: #001731;
-  min-width: 100%;
+  max-width: 100%;
   min-height: 900px;
   position: relative;
   overflow: hidden;
@@ -81,7 +81,12 @@ body {
 }
 @media (max-width: 1470px) {
   .header-wrapper .hero__screen {
-    max-width: 400px;
+    max-width: 420px;
+  }
+}
+@media (max-width: 995px) {
+  .header-wrapper .hero__screen {
+    max-width: calc(350px + 50 * (100vw - 320px) / 1150);
   }
 }
 
@@ -130,7 +135,7 @@ body {
 }
 @media (max-width: 992px) {
   .section__hero .container__hero {
-    margin: calc(20px + 94 * (100vw - 320px) / 672);
+    margin: clamp(1.1765rem, -1.4565rem + 13.9881vw, 6.7059rem);
   }
 }
 .section__hero .container__hero .hero__title {
@@ -143,13 +148,10 @@ body {
 }
 @media (max-width: 992px) {
   .section__hero .container__hero .hero__title {
-    font-size: calc(30px + 42 * (100vw - 320px) / 672);
+    font-size: clamp(1.7647rem, 0.5882rem + 6.25vw, 4.2353rem);
     line-height: 100%;
-    margin-bottom: 14px;
+    margin-bottom: clamp(0.5882rem, -0.0841rem + 3.5715vw, 2rem);
   }
-}
-.section__hero .container__hero .hero__btns {
-  margin-bottom: 34px;
 }
 @media (max-width: 450px) {
   .section__hero .container__hero .hero__btns {
@@ -161,6 +163,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+    gap: 10px;
   }
 }
 .section__hero .container__hero .hero__btns span {
@@ -172,7 +175,7 @@ body {
 }
 @media (max-width: 450px) {
   .section__hero .container__hero .hero__btns span {
-    margin: 10px 0px;
+    display: none;
   }
 }
 .section__hero .container__hero .hero__btns .hero__btn {
@@ -183,9 +186,41 @@ body {
   font-size: 22px;
   line-height: 145%;
   color: #aac0e0;
+  margin-top: 34px;
 }
 @media (max-width: 992px) {
   .section__hero .container__hero .hero__text {
-    font-size: calc(14px + 8 * (100vw - 320px) / 672);
+    font-size: clamp(0.9412rem, 0.7732rem + 0.8928vw, 1.2941rem);
+    margin-top: clamp(0.5882rem, -0.0841rem + 3.5715vw, 2rem);
   }
+}
+
+.story {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.story__video {
+  width: 804px;
+  height: 497px;
+  position: relative;
+  background: #398BFF;
+  border-radius: 12px;
+  margin: -62px 0px 0px 80px;
+}
+.story__video .story__window {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.story__video .story__human {
+  position: absolute;
+  bottom: -2px;
+  right: 0px;
+}
+.story__video .story__arrow {
+  position: absolute;
+  top: 48%;
+  left: 48%;
 }

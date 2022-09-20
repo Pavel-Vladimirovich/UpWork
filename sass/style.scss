@@ -47,12 +47,12 @@ $secondary-color-hover: #1760c5;
 // ========================navbar========================================
 .header-wrapper {
   background: #001731;
-  min-width: 100%;
+  max-width: 100%;
   min-height: 900px;
   position: relative;
   overflow: hidden;
   @media (max-width: 1470px) {
-    .header-wrapper{
+    .header-wrapper {
       display: flex;
       flex-direction: column;
     }
@@ -63,10 +63,12 @@ $secondary-color-hover: #1760c5;
     bottom: 0px;
     opacity: 0.75;
     max-width: 100%;
-    // max-height: 100%;
-    @media (max-width: 1470px){
+    @media (max-width: 1470px) {
       right: 0px;
       bottom: -60px;
+    }
+    @media (max-width: 995px) {
+      // bottom: calc(150px + (-60 + 150) * ((100vw + 320px) / (995 + 320)));
     }
   }
   & .hero__screen {
@@ -76,7 +78,10 @@ $secondary-color-hover: #1760c5;
     z-index: 3;
     max-width: 645px;
     @media (max-width: 1470px) {
-      max-width: 400px;
+      max-width: 420px;
+    }
+    @media (max-width: 995px) {
+      max-width: calc(350px + (400 - 350) * ((100vw - 320px) / (1470 - 320)));
     }
   }
 }
@@ -131,7 +136,9 @@ $secondary-color-hover: #1760c5;
     margin-left: 120px;
     max-width: 745px;
     @media (max-width: 992px) {
-      margin: calc(20px + (114 - 20) * ((100vw - 320px) / (992 - 320)));
+      // отзывчивые отступы с помощью calc или clamp
+      // margin: calc(20px + (114 - 20) * ((100vw - 320px) / (992 - 320)));
+      margin: clamp(1.1765rem, -1.4565rem + 13.9881vw, 6.7059rem);
     }
     .hero__title {
       font-weight: 700;
@@ -141,18 +148,18 @@ $secondary-color-hover: #1760c5;
       color: #ffffff;
       margin-bottom: 34px;
       @media (max-width: 992px) {
-        font-size:calc(30px + (72 - 30) * ((100vw - 320px) / (992 - 320)));
+        font-size: clamp(1.7647rem, 0.5882rem + 6.25vw, 4.2353rem);
         line-height: 100%;
-        margin-bottom: 14px;
+        margin-bottom: clamp(0.5882rem, -0.0841rem + 3.5715vw, 2rem);
       }
     }
     .hero__btns {
       // border: 1px solid red;
-      margin-bottom: 34px;
       @media (max-width: 450px) {
         display: flex;
         flex-direction: column;
         text-align: center;
+        gap: 10px;
       }
       & span {
         margin: 0px 14px;
@@ -161,9 +168,8 @@ $secondary-color-hover: #1760c5;
         line-height: 145%;
         color: rgba(255, 255, 255, 0.35);
         @media (max-width: 450px) {
-          margin: 10px 0px;
+          display: none;
         }
-
       }
       .hero__btn {
         padding: 15px 22px;
@@ -180,11 +186,60 @@ $secondary-color-hover: #1760c5;
       font-size: 22px;
       line-height: 145%;
       color: #aac0e0;
+      margin-top: 34px;
       @media (max-width: 992px) {
-        font-size:calc(14px + (22 - 14) * ((100vw - 320px) / (992 - 320)));
+        font-size: clamp(0.9412rem, 0.7732rem + 0.8928vw, 1.2941rem);
+        // margin-top: calc(10px + (34 - 10) * ((100vw - 320px) / (992 - 320)));
+        // отзывчивые отступы с помощью calc или clamp
+        margin-top: clamp(0.5882rem, -0.0841rem + 3.5715vw, 2rem);
       }
     }
   }
 }
+// =====================section story============================
+main{
+  // border: 1px solid red;
+}
+.section__story {
+  // width: 100%;
+  // border: 1px solid red;
 
+}
+.container__story {
+  // border: 1px solid red;
 
+}
+.story {
+  display: flex;
+}
+.story__item {
+}
+.story__video {
+  // border:1px solid red ;
+  width: 804px;
+  height: 497px;
+  position: relative;
+  background: #398BFF;
+  border-radius: 12px;
+  margin: -62px 0px 0px 80px;
+  & .story__window {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  & .story__human {
+    position: absolute;
+    bottom: -2px;
+    right: 0px;
+  }
+  & .story__arrow {
+    position: absolute;
+    top: 48%;
+    left: 48%;
+  }
+}
+
+.story__title {
+}
+.story__text {
+}
