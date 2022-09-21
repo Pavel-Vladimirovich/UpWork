@@ -1,181 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Практика вёрстки" />
-    <meta name="keywords" content="Вёрстка макета с UpWork" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-      crossorigin="anonymous"
-    ></script>
 
-    <title>UpWork</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="header-wrapper">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"
-              ><span
-                ><svg
-                  width="50"
-                  height="50"
-                  viewBox="0 0 50 50"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.6 33.1901C7.0363 33.1901 7.39 29.5233 7.39 25.0001C7.39 20.4769 7.0363 16.8101 6.6 16.8101C6.16369 16.8101 5.81 20.4769 5.81 25.0001C5.81 29.5233 6.16369 33.1901 6.6 33.1901Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M8.70001 34.0999C9.18602 34.0999 9.58001 30.0257 9.58001 24.9999C9.58001 19.9741 9.18602 15.8999 8.70001 15.8999C8.214 15.8999 7.82001 19.9741 7.82001 24.9999C7.82001 30.0257 8.214 34.0999 8.70001 34.0999Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M11.04 35.1199C11.5757 35.1199 12.01 30.589 12.01 24.9999C12.01 19.4108 11.5757 14.8799 11.04 14.8799C10.5043 14.8799 10.07 19.4108 10.07 24.9999C10.07 30.589 10.5043 35.1199 11.04 35.1199Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M13.63 36.24C14.2265 36.24 14.71 31.2077 14.71 25C14.71 18.7923 14.2265 13.76 13.63 13.76C13.0335 13.76 12.55 18.7923 12.55 25C12.55 31.2077 13.0335 36.24 13.63 36.24Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M16.51 37.49C17.1727 37.49 17.71 31.898 17.71 25C17.71 18.102 17.1727 12.51 16.51 12.51C15.8473 12.51 15.31 18.102 15.31 25C15.31 31.898 15.8473 37.49 16.51 37.49Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M19.72 38.8801C20.4545 38.8801 21.05 32.6658 21.05 25.0001C21.05 17.3344 20.4545 11.1201 19.72 11.1201C18.9855 11.1201 18.39 17.3344 18.39 25.0001C18.39 32.6658 18.9855 38.8801 19.72 38.8801Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M23.28 40.4201C24.0974 40.4201 24.76 33.5163 24.76 25.0001C24.76 16.4839 24.0974 9.58008 23.28 9.58008C22.4626 9.58008 21.8 16.4839 21.8 25.0001C21.8 33.5163 22.4626 40.4201 23.28 40.4201Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M27.23 42.1301C28.1413 42.1301 28.88 34.4607 28.88 25.0001C28.88 15.5395 28.1413 7.87012 27.23 7.87012C26.3187 7.87012 25.58 15.5395 25.58 25.0001C25.58 34.4607 26.3187 42.1301 27.23 42.1301Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M31.62 44.04C32.6307 44.04 33.45 35.5155 33.45 25C33.45 14.4845 32.6307 5.95996 31.62 5.95996C30.6093 5.95996 29.79 14.4845 29.79 25C29.79 35.5155 30.6093 44.04 31.62 44.04Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M36.5 46.1501C37.6211 46.1501 38.53 36.6809 38.53 25.0001C38.53 13.3193 37.6211 3.8501 36.5 3.8501C35.3789 3.8501 34.47 13.3193 34.47 25.0001C34.47 36.6809 35.3789 46.1501 36.5 46.1501Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M41.92 48.5C43.1682 48.5 44.18 37.9787 44.18 25C44.18 12.0213 43.1682 1.5 41.92 1.5C40.6718 1.5 39.66 12.0213 39.66 25C39.66 37.9787 40.6718 48.5 41.92 48.5Z"
-                    fill="white"
-                  /></svg></span
-            ></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">How it works</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">FAQ</a>
-                </li>
-              </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Практика вёрстки" />
+  <meta name="keywords" content="Вёрстка макета с UpWork" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
 
-              <form class="d-flex btn-navbar">
-                <select name="leng" id="">
-                  <option value="ru">RU</option>
-                  <option value="en">EN</option>
-                </select>
-                <button class="btn btn-nav btn-primary">
-                  Start free trial
-                </button>
-                <button class="btn btn-nav btn-secondary">Sign In</button>
-              </form>
-            </div>
-          </div>
-        </nav><!--navbar-->
-        <section class="section__hero">
-          <div class="container__hero">
-            <h1 class="hero__title">
-              The most advanced <br> 5- cards Omaha Solvet for 6-max and HU
-            </h1>
-            <div class="hero__btns">
-              <button class="btn hero__btn btn-primary">Start now</button>
-              <span>or</span>
-              <button class="btn hero__btn btn-secondary">
-                Take a free tour
+  <title>UpWork</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-wrapper">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><span><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.6 33.1901C7.0363 33.1901 7.39 29.5233 7.39 25.0001C7.39 20.4769 7.0363 16.8101 6.6 16.8101C6.16369 16.8101 5.81 20.4769 5.81 25.0001C5.81 29.5233 6.16369 33.1901 6.6 33.1901Z"
+                  fill="white" />
+                <path
+                  d="M8.70001 34.0999C9.18602 34.0999 9.58001 30.0257 9.58001 24.9999C9.58001 19.9741 9.18602 15.8999 8.70001 15.8999C8.214 15.8999 7.82001 19.9741 7.82001 24.9999C7.82001 30.0257 8.214 34.0999 8.70001 34.0999Z"
+                  fill="white" />
+                <path
+                  d="M11.04 35.1199C11.5757 35.1199 12.01 30.589 12.01 24.9999C12.01 19.4108 11.5757 14.8799 11.04 14.8799C10.5043 14.8799 10.07 19.4108 10.07 24.9999C10.07 30.589 10.5043 35.1199 11.04 35.1199Z"
+                  fill="white" />
+                <path
+                  d="M13.63 36.24C14.2265 36.24 14.71 31.2077 14.71 25C14.71 18.7923 14.2265 13.76 13.63 13.76C13.0335 13.76 12.55 18.7923 12.55 25C12.55 31.2077 13.0335 36.24 13.63 36.24Z"
+                  fill="white" />
+                <path
+                  d="M16.51 37.49C17.1727 37.49 17.71 31.898 17.71 25C17.71 18.102 17.1727 12.51 16.51 12.51C15.8473 12.51 15.31 18.102 15.31 25C15.31 31.898 15.8473 37.49 16.51 37.49Z"
+                  fill="white" />
+                <path
+                  d="M19.72 38.8801C20.4545 38.8801 21.05 32.6658 21.05 25.0001C21.05 17.3344 20.4545 11.1201 19.72 11.1201C18.9855 11.1201 18.39 17.3344 18.39 25.0001C18.39 32.6658 18.9855 38.8801 19.72 38.8801Z"
+                  fill="white" />
+                <path
+                  d="M23.28 40.4201C24.0974 40.4201 24.76 33.5163 24.76 25.0001C24.76 16.4839 24.0974 9.58008 23.28 9.58008C22.4626 9.58008 21.8 16.4839 21.8 25.0001C21.8 33.5163 22.4626 40.4201 23.28 40.4201Z"
+                  fill="white" />
+                <path
+                  d="M27.23 42.1301C28.1413 42.1301 28.88 34.4607 28.88 25.0001C28.88 15.5395 28.1413 7.87012 27.23 7.87012C26.3187 7.87012 25.58 15.5395 25.58 25.0001C25.58 34.4607 26.3187 42.1301 27.23 42.1301Z"
+                  fill="white" />
+                <path
+                  d="M31.62 44.04C32.6307 44.04 33.45 35.5155 33.45 25C33.45 14.4845 32.6307 5.95996 31.62 5.95996C30.6093 5.95996 29.79 14.4845 29.79 25C29.79 35.5155 30.6093 44.04 31.62 44.04Z"
+                  fill="white" />
+                <path
+                  d="M36.5 46.1501C37.6211 46.1501 38.53 36.6809 38.53 25.0001C38.53 13.3193 37.6211 3.8501 36.5 3.8501C35.3789 3.8501 34.47 13.3193 34.47 25.0001C34.47 36.6809 35.3789 46.1501 36.5 46.1501Z"
+                  fill="white" />
+                <path
+                  d="M41.92 48.5C43.1682 48.5 44.18 37.9787 44.18 25C44.18 12.0213 43.1682 1.5 41.92 1.5C40.6718 1.5 39.66 12.0213 39.66 25C39.66 37.9787 40.6718 48.5 41.92 48.5Z"
+                  fill="white" />
+              </svg></span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">How it works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FAQ</a>
+              </li>
+            </ul>
+
+            <form class="d-flex btn-navbar">
+              <select name="leng" id="">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+              </select>
+              <button class="btn btn-nav btn-primary">
+                Start free trial
               </button>
-            </div>
-            <p class="hero__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
-              eleifend tristique scelerisque eget.
-            </p>
+              <button class="btn btn-nav btn-secondary">Sign In</button>
+            </form>
           </div>
-        </section><!--section__hero-->
-        <img class="hero__ellips" src="/img/Ellipse 28.png" alt="" />
-        <img class="hero__screen" src="/img/Screen.png" alt="" />
-      </div> <!--header-wrapper-->
-    </header>
-    <!--main-->
-    <main>
-      <section class="section__story">
-        <div class="container__story">
-          <div class="story">
-            <div class="story__item">
-              <div class="story__video">
-                <!-- <img class="story__window" src="/img/Safari window 1.jpg" alt=""> -->
-                <img class="story__human" src="/img/Tony A.jpg" alt="">
-                <img class="story__arrow" src="/img/arrow.svg" alt="">
+        </div>
+      </nav>
+      <!--navbar-->
+      <section class="section__hero">
+        <div class="container__hero">
+          <h1 class="hero__title">
+            The most advanced <br> 5- cards Omaha Solvet for 6-max and HU
+          </h1>
+          <div class="hero__btns">
+            <button class="btn hero__btn btn-primary">Start now</button>
+            <span>or</span>
+            <button class="btn hero__btn btn-secondary">
+              Take a free tour
+            </button>
+          </div>
+          <p class="hero__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+            eleifend tristique scelerisque eget.
+          </p>
+        </div>
+      </section>
+      <!--section__hero-->
+      <img class="hero__ellips" src="/img/Ellipse 28.png" alt="" />
+      <img class="hero__screen" src="/img/Screen.png" alt="" />
+    </div>
+    <!--header-wrapper-->
+  </header>
+  <!--main-->
+  <main>
+    <section class="section__story">
+      <div class="container__story">
+        <div class="story">
+
+          <div class="story__item">
+            <div class="story__video">
+              <img class="story__window" src="/img/Safari window 1.jpg" alt="">
+
+              <!-- <img class="story__human" src="/img/Tony A.jpg" alt=""> -->
+              <img class="story__arrow" src="/img/arrow.svg" alt="">
             </div>
-            </div>
-             
-            <div class="story__item">
-                <h3 class="story__title">Our story</h2>
-                <p class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat eleifend tristique scelerisque eget.</p>
-                <p class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat eleifend tristique scelerisque eget.</p>
+          </div>
+
+          <div class="story__item">
+            <div class="container__item">
+              <h3 class="story__title">Our story</h2>
+                <p class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat eleifend
+                  tristique scelerisque eget.</p>
+                <p class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat eleifend
+                  tristique scelerisque eget.</p>
             </div>
           </div>
         </div>
-      </section><!--sections story-->
-    </main>
-  </body>
-  <script src="js/script.js"></script>
+      </div>
+    </section>
+    <!--sections story-->
+  </main>
+</body>
+<script src="js/script.js"></script>
+
 </html>
