@@ -28,7 +28,7 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="header-wrapper">
+    <div class="header header__wrapper">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><span><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
@@ -87,47 +87,47 @@
                 <a class="nav-link" href="#">FAQ</a>
               </li>
             </ul>
-
-            <form class="d-flex btn-navbar">
-              <select name="leng" id="">
-                <option value="ru">RU</option>
-                <option value="en">EN</option>
-              </select>
-              <button class="btn btn-nav btn-primary">
+            <select class="navbar__leng" id="">
+              <option class="navbar__option" value="ru">RU</option>
+              <option class="navbar__option" value="en">EN</option>
+            </select>
+            <div class="d-flex navbar__auth">
+              <button class="button navbar__buuton button_primary">
                 Start free trial
               </button>
-              <button class="btn btn-nav btn-secondary">Sign In</button>
-            </form>
+              <button class="button navbar__buuton button_secondary">Sign In</button>
+            </div>
           </div>
         </div>
       </nav>
       <!--navbar-->
       <section class="section__hero">
         <div class="container__hero">
-          <h1 class="hero__title">
-            The most advanced <br> 5- cards Omaha Solvet for 6-max and HU
-          </h1>
-          <div class="hero__btns">
-            <button class="btn hero__btn btn-primary">Start now</button>
-            <span>or</span>
-            <button class="btn hero__btn btn-secondary">
-              Take a free tour
-            </button>
+          <div class="hero">
+            <h1 class="hero__title">
+              The most advanced <br> 5- cards Omaha Solvet for 6-max and HU
+            </h1>
+            <div class="hero__buttons">
+              <button class="button hero__button button_primary">Start now</button>
+              <span class="hero__text-between">or</span>
+              <button class="button hero__button button_secondary">
+                Take a free tour
+              </button>
+            </div>
+            <p class="hero__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+              eleifend tristique scelerisque eget.
+            </p>
           </div>
-          <p class="hero__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
-            eleifend tristique scelerisque eget.
-          </p>
         </div>
       </section>
-      <!--section__hero-->
-      <img class="hero__ellips" src="/img/Ellipse 28.png" alt="" />
-      <img class="hero__screen" src="/img/Screen.png" alt="" />
+      <!--hero__section-->
+      <img class="header__ellips" src="/img/Ellipse 28.png" alt="" />
+      <img class="header__screen" src="/img/Screen.png" alt="" />
     </div>
     <!--header-wrapper-->
   </header>
-  <!--main-->
-  <main>
+  <main class="main">
     <section class="section__story">
       <div class="section__story__container">
         <div class="story__item_left">
@@ -151,7 +151,16 @@
       </div>
     </section>
     <!--sections story-->
+    <section class="section__features">
+      <div class="features__container">
+        <div class="features">
+
+        </div>
+      </div>
+    </section>
+    <!--section__features-->
   </main>
+  <!--main-->
 </body>
 <script src="js/script.js"></script>
 

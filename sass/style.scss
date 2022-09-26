@@ -1,6 +1,12 @@
+
 * {
   box-sizing: border-box;
 }
+
+@import "header.scss";
+
+
+
 
 //====================================================================
 body {
@@ -28,10 +34,14 @@ $secondary-color: #398bff;
 $secondary-color-hover: #1760c5;
 
 // ========================общие стили button=========================
-%btn-style-primary {
+
+.button{
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.01em;
+}
+
+%button_style_primary {
   color: $primary-color;
   background: $secondary-color;
   border: 3px solid rgba(0, 105, 253, 0.752);
@@ -42,13 +52,11 @@ $secondary-color-hover: #1760c5;
   }
 }
 
-%btn-style-secondary {
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 0.01em;
+%button_style_secondary {
   color: $secondary-color;
   background: rgba(44, 130, 253, 0.15);
-  border: none;
+  border-style: none;
+  border-radius: 4px;
 
   &:hover {
     background: $secondary-color-hover;
@@ -56,190 +64,10 @@ $secondary-color-hover: #1760c5;
   }
 }
 
-// ========================navbar========================================
-.header-wrapper {
-  background: #001731;
-  max-width: 100%;
-  min-height: 900px;
-  position: relative;
-  overflow: hidden;
 
-  @media (max-width: 1470px) {
-    .header-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  & .hero__ellips {
-    position: absolute;
-    right: 200px;
-    bottom: 0px;
-    opacity: 0.75;
-    max-width: 100%;
-
-    @media (max-width: 1470px) {
-      right: 0px;
-      bottom: -60px;
-    }
-
-    @media (max-width: 995px) {
-      // bottom: calc(150px + (-60 + 150) * ((100vw + 320px) / (995 + 320)));
-    }
-  }
-
-  & .hero__screen {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-    max-width: 645px;
-
-    @media (max-width: 1470px) {
-      max-width: 420px;
-    }
-
-    @media (max-width: 995px) {
-      max-width: calc(350px + (400 - 350) * ((100vw - 320px) / (1470 - 320)));
-    }
-  }
-}
-
-.container-fluid {
-  font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 0.02em;
-  border-radius: 8px;
-
-  & .nav-item {
-    padding-left: 24px;
-
-    a {
-      color: $primary-color;
-    }
-
-    a:hover {
-      opacity: 0.7;
-      transition: 0.3s all;
-    }
-  }
-
-  .btn-navbar {
-    gap: 8px;
-
-    select {
-      position: relative;
-      margin-right: 40px;
-      border: 1px solid #ffffff;
-      border-radius: 5px;
-      background: none;
-      color: #ffffff;
-
-      option {
-        position: absolute;
-        top: 120px;
-        left: 10px;
-        background: #001731;
-      }
-    }
-  }
-
-  .btn-primary {
-    @extend %btn-style-primary;
-  }
-
-  .btn-secondary {
-    @extend %btn-style-secondary;
-  }
-}
-
-// ================== section__hero ===========================
-
-.section__hero {
-  position: relative;
-  z-index: 2;
-
-  .container__hero {
-    // border: 1px solid red;
-    margin-top: 114px;
-    margin-left: 120px;
-    max-width: 745px;
-
-    @media (max-width: 992px) {
-      // отзывчивые отступы с помощью calc или clamp
-      // margin: calc(20px + (114 - 20) * ((100vw - 320px) / (992 - 320)));
-      margin: clamp(1.1765rem, -1.4565rem + 13.9881vw, 6.7059rem);
-    }
-
-    .hero__title {
-      font-weight: 700;
-      font-size: 72px;
-      line-height: 95%;
-      letter-spacing: -0.03em;
-      color: #ffffff;
-      margin-bottom: 34px;
-
-      @media (max-width: 992px) {
-        font-size: clamp(1.7647rem, 0.5882rem + 6.25vw, 4.2353rem);
-        line-height: 100%;
-        margin-bottom: clamp(0.5882rem, -0.0841rem + 3.5715vw, 2rem);
-      }
-    }
-
-    .hero__btns {
-
-      // border: 1px solid red;
-      @media (max-width: 450px) {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-      }
-
-      & span {
-        margin: 0px 14px;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 145%;
-        color: rgba(255, 255, 255, 0.35);
-
-        @media (max-width: 450px) {
-          display: none;
-        }
-      }
-
-      .hero__btn {
-        padding: 15px 22px;
-
-        &.btn-primary {
-          @extend %btn-style-primary;
-        }
-
-        &.btn-secondary {
-          @extend %btn-style-secondary;
-        }
-      }
-    }
-
-    .hero__text {
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 145%;
-      color: #aac0e0;
-      margin-top: 34px;
-
-      @media (max-width: 992px) {
-        font-size: clamp(0.9412rem, 0.7732rem + 0.8928vw, 1.2941rem);
-        // margin-top: calc(10px + (34 - 10) * ((100vw - 320px) / (992 - 320)));
-        // отзывчивые отступы с помощью calc или clamp
-        margin-top: clamp(0.5882rem, -0.0841rem + 3.5715vw, 2rem);
-      }
-    }
-  }
-}
 
 // =====================section story============================
-main {
+.main {
   // border: 1px solid red;
 }
 
@@ -250,9 +78,7 @@ main {
 
 .section__story__container {
   display: flex;
-  // justify-content:space-between;
   align-items: center;
-  // border: 1px solid red;
 
   @media (max-width: 1140px) {
     flex-direction: column-reverse;
@@ -261,10 +87,8 @@ main {
 
 .story__item_left {
   flex: 0 1 auto;
-  // border:1px solid red;
 
   .story__item__video {
-    // border:1px solid red ;
     position: relative;
     border-radius: 12px;
     margin: -62px 0px 0px 0px;
@@ -310,19 +134,18 @@ main {
 
 .story__item_right {
   flex: 0 1 100%;
-  // border: 1px solid red;
   display: flex;
   justify-content: center;
 
 
   .story__item__text-container {
     max-width: 466px;
-    // border: 1px solid rgb(43, 53, 255);
 
     @media (max-width: 1140px) {
       max-width: 566px;
       padding: 20px;
-      p:not(:last-child){
+
+      p:not(:last-child) {
         margin-bottom: 10px;
       }
     }
@@ -339,7 +162,7 @@ main {
     @media (max-width: 1140px) {
       margin-bottom: 5px;
       font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1140 - 320)));
-      
+
     }
   }
 
@@ -355,8 +178,6 @@ main {
       font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1140 - 320)));
       line-height: 130%;
       // margin-bottom: 15px;
-
-
     }
   }
 }
