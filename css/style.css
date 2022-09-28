@@ -330,6 +330,17 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 1140px) {
+  .features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .features__item_left {
   display: -webkit-box;
@@ -343,27 +354,70 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 1px solid red;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 675px;
+          flex: 0 1 675px;
+}
+
+.features__item_right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.features__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  border: 1px solid red;
 }
 
 .features__accordion {
-  width: 675px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
+          box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
+}
+.features__accordion .accordion-item .accordion-button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #001731;
+  opacity: 0.75;
+}
+.features__accordion .accordion-item .accordion-button:hover {
+  opacity: 1;
+}
+.features__accordion .accordion-item .accordion-button:focus {
+  color: #001731;
+  opacity: 1;
+}
+.features__accordion .accordion-item .accordion-img {
+  padding-right: 10px;
+  width: 30px;
+  height: 30px;
 }
 
 .quote .quote__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 675px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 121px;
+  background: #F7F7F7;
+  border-radius: 12px;
 }
-.quote .quote__item-img {
-  background-color: #398bff;
-  border-radius: 50%;
+.quote .quote__item__img {
+  padding: 0px 7px 0px 15px;
 }
-.features__img {
-  width: 683px;
-  height: 468px;
+.quote .quote__author {
+  margin-top: 8px;
+  font-weight: 700;
 }
 
 .button__feature {
   padding: 15px 22px;
+  margin-top: 35px;
 }
