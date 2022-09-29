@@ -279,16 +279,32 @@ body {
   }
 }
 
-.section__features-icon {
-  width: 34px;
-  height: 34px;
+@media (max-width: 1140px) {
+  .section__features__container {
+    align-items: center;
+    position: relative;
+  }
+}
+
+@media (max-width: 1140px) {
+  .section__features-icon {
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    left: 0px;
+  }
 }
 
 .section__features-title {
-  border: 1px solid red;
   margin: 24px 0px 24px 0px;
   margin-bottom: 24px;
 }
+@media (max-width: 1140px) {
+  .section__features-title {
+    display: inline-block;
+  }
+}
+
 .features {
   border: 1px solid red;
   display: flex;
