@@ -2,6 +2,8 @@
   // box-sizing: border-box;
 }
 
+@import 'fonts';
+
 //====================================================================
 body {
   // max-width: 1440px;
@@ -61,6 +63,9 @@ $secondary-color-hover: #1760c5;
   line-height: 110%;
   letter-spacing: -0.03em;
   color: #001731;
+  @media (max-width: 1140px) {
+    font-size: clamp(1.1765rem, 0.6715rem + 2.6829vw, 2.4706rem);
+  }
 }
 
 // ===========================ограничивающий container main=====================
@@ -93,10 +98,6 @@ $secondary-color-hover: #1760c5;
     @media (max-width: 1470px) {
       right: 0px;
       bottom: -60px;
-    }
-
-    @media (max-width: 995px) {
-      // bottom: calc(150px + (-60 + 150) * ((100vw + 320px) / (995 + 320)));
     }
   }
 
@@ -137,7 +138,6 @@ $secondary-color-hover: #1760c5;
   }
 
   .navbar__leng {
-    // position: relative;
     font-weight: 700;
     font-size: 15px;
     line-height: 16px;
@@ -147,9 +147,6 @@ $secondary-color-hover: #1760c5;
     color: #ffffff;
 
     & .navbar__option {
-      // position: absolute;
-      // top: 220px;
-      // left: 10px;
       background: #001731;
     }
   }
@@ -182,7 +179,6 @@ $secondary-color-hover: #1760c5;
 
 .section__hero {
   position: relative;
-  // z-index: 2;
 }
 
 .hero {
@@ -191,8 +187,6 @@ $secondary-color-hover: #1760c5;
   max-width: 745px;
 
   @media (max-width: 992px) {
-    // отзывчивые отступы с помощью calc или clamp
-    // margin: calc(20px + (114 - 20) * ((100vw - 320px) / (992 - 320)));
     margin: clamp(1.1765rem, -1.4565rem + 13.9881vw, 6.7059rem);
   }
 
@@ -253,8 +247,6 @@ $secondary-color-hover: #1760c5;
 
     @media (max-width: 992px) {
       font-size: clamp(0.9412rem, 0.7732rem + 0.8928vw, 1.2941rem);
-      // margin-top: calc(10px + (34 - 10) * ((100vw - 320px) / (992 - 320)));
-      // отзывчивые отступы с помощью calc или clamp
       margin-top: clamp(0.5882rem, -0.0841rem + 3.5715vw, 2rem);
     }
   }
@@ -269,104 +261,79 @@ $secondary-color-hover: #1760c5;
 
   @media (max-width: 1140px) {
     flex-direction: column-reverse;
+    margin-bottom: clamp(1.1765rem, -0.0172rem + 6.3414vw, 4.2353rem);
   }
 }
 
 .story__item_left {
-  flex: 0 1 auto;
+  flex: 0 2 auto;
 
-  .story__item__video {
+  & .story__item__video {
     position: relative;
-    border-radius: 12px;
     margin: -62px 0px 0px 0px;
 
     @media (max-width: 1140px) {
       margin: 0px 0px 0px 0px;
-
     }
 
-    @media (max-width: 992px) {
-      // margin-top: clamp(-0.625rem, 0.9226rem + -8.2217vw, -3.875rem);
-      // margin-top: calc(10px + (-62 - 10) * ((100vw - 320px) / (992 - 320)));;
-      // margin-left: clamp(1.25rem, -0.5357rem + 9.4866vw, 5rem);
-
-    }
-
-    .story__window {
+    & .story__video {
       max-width: 100%;
-      max-height: 100%;
-      border-radius: 12px;
-      // position: relative;
-      // top: 0;
-      // left: 0;
-      object-fit: cover;
-      object-position: 0 0;
-    }
-
-    .story__human {
-      position: absolute;
-      bottom: -2px;
-      right: 0px;
-    }
-
-    .story__arrow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50% -50%);
-      cursor: pointer;
     }
   }
 }
 
 .story__item_right {
-  flex: 0 1 100%;
+  flex: 1 1 auto;
   display: flex;
   justify-content: center;
+  padding: 40px;
 
+  @media (max-width: 1140px) {
+    padding: 20px 0px 20px 0px;
+    // padding-left: clamp(0rem, -0.9182rem + 4.8780vw, 2.3529rem);
+    // padding-right: clamp(0rem, -0.9182rem + 4.8780vw, 2.3529rem);
+    // padding-top: clamp(1.1765rem, 0.7174rem + 2.4389vw, 2.3529rem);
+    // padding-bottom: clamp(1.1765rem, 0.7174rem + 2.4389vw, 2.3529rem);
+  }
 
-  .story__item__text-container {
-    max-width: 466px;
+  & .story__item__text-container {
+    max-width: 500px;
 
     @media (max-width: 1140px) {
-      max-width: 566px;
-      padding: 20px;
+      max-width: 100%;
 
       p:not(:last-child) {
         margin-bottom: 10px;
+
       }
     }
 
-  }
+    & .story__title {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      text-align: left;
 
-  .story__title {
-    font-size: 28px;
-    font-weight: 700;
-    // line-height: 31px;
-    letter-spacing: -0.03em;
-    text-align: left;
+      @media (max-width: 1140px) {
+        font-size: clamp(1.1765rem, 0.9929rem + 0.9756vw, 1.6471rem);
+      }
+    }
 
-    @media (max-width: 1140px) {
-      margin-bottom: 5px;
-      font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1140 - 320)));
+    & .story__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 175%;
+      color: #001731;
+      opacity: 0.75;
+      margin-bottom: 0px;
 
+      @media (max-width: 1140px) {
+        font-size: clamp(0.8235rem, 0.7776rem + 0.2440vw, 0.9412rem);
+      }
     }
   }
 
-  .story__text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 175%;
-    color: #001731;
-    opacity: 0.75;
 
-    @media (max-width: 1140px) {
-      margin-bottom: 2px;
-      font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1140 - 320)));
-      line-height: 130%;
-      // margin-bottom: 15px;
-    }
-  }
 }
 
 
@@ -375,7 +342,9 @@ $secondary-color-hover: #1760c5;
 
 .section__features {}
 
-.features__container {}
+.features__container {
+  @media (max-width: 1140px) {}
+}
 
 .section__features-icon {
   width: 34px;
@@ -383,14 +352,19 @@ $secondary-color-hover: #1760c5;
 }
 
 .section__features-title {
+  border: 1px solid red;
+
   margin: 24px 0px 24px 0px;
   margin-bottom: 24px;
+  @media (max-width: 1140px) {}
+
 }
 
 .features {
   border: 1px solid red;
   display: flex;
   justify-content: space-between;
+
   @media (max-width:1140px) {
     flex-direction: column;
     align-items: center;
@@ -425,6 +399,7 @@ $secondary-color-hover: #1760c5;
 .features__accordion {
   background: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
+
   .accordion-item {
     & .accordion-button {
       font-weight: 700;
@@ -433,18 +408,21 @@ $secondary-color-hover: #1760c5;
       letter-spacing: -0.01em;
       color: #001731;
       opacity: 0.75;
-      &:hover{
+
+      &:hover {
         opacity: 1;
       }
-      &:focus{
+
+      &:focus {
         color: #001731;
         opacity: 1;
-       
+
       }
     }
+
     & .accordion-img {
       padding-right: 10px;
-      width:30px;
+      width: 30px;
       height: 30px;
     }
   }
