@@ -1,10 +1,4 @@
 body {
-  font-family: "Courier New", Courier, monospace;
-  color: black;
-}
-
-body {
-  height: 100vh;
   font-family: "Gilroy";
   color: #ffffff;
   font-style: normal;
@@ -12,6 +6,27 @@ body {
   font-size: 17px;
   line-height: 20px;
   letter-spacing: 0.02em;
+}
+
+.container-work {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container__header {
+  background: #001731;
+  min-height: 900px;
+  position: relative;
+}
+
+.container__main {
+  padding: 0px 80px;
+}
+@media (max-width: 1440px) {
+  .container__main {
+    padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+    padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+  }
 }
 
 .button {
@@ -54,55 +69,6 @@ body {
   }
 }
 
-.container__main {
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.header__wrapper {
-  background: #001731;
-  max-width: 100%;
-  min-height: 900px;
-  position: relative;
-  overflow: hidden;
-}
-@media (max-width: 1470px) {
-  .header__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.header__wrapper .header__ellips {
-  position: absolute;
-  right: 200px;
-  bottom: 0px;
-  opacity: 0.75;
-  max-width: 100%;
-}
-@media (max-width: 1470px) {
-  .header__wrapper .header__ellips {
-    right: 0px;
-    bottom: -60px;
-  }
-}
-.header__wrapper .header__screen {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  max-width: 645px;
-}
-@media (max-width: 1470px) {
-  .header__wrapper .header__screen {
-    max-width: 420px;
-  }
-}
-@media (max-width: 995px) {
-  .header__wrapper .header__screen {
-    max-width: calc(350px + 50 * (100vw - 320px) / 1150);
-  }
-}
-
 .container-fluid {
   font-weight: 600;
   font-size: 17px;
@@ -138,6 +104,48 @@ body {
 .navbar__auth .navbar__buuton {
   padding: 8px 12px;
 }
+.header__ellips {
+  position: absolute;
+  right: 200px;
+  bottom: 0px;
+  opacity: 0.75;
+  max-width: 100%;
+}
+@media (max-width: 1470px) {
+  .header__ellips {
+    right: 0px;
+    bottom: -60px;
+  }
+}
+
+.header__screen {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  max-width: 700px;
+}
+@media (max-width: 1350px) {
+  .header__screen {
+    max-width: 620px;
+  }
+}
+@media (max-width: 1270px) {
+  .header__screen {
+    max-width: 520px;
+  }
+}
+@media (max-width: 1170px) {
+  .header__screen {
+    max-width: 420px;
+  }
+}
+@media (max-width: 1100px) {
+  .header__screen {
+    max-width: calc(350px + 70 * (100vw - 320px) / 780);
+  }
+}
+
 .section__hero {
   position: relative;
 }
@@ -196,6 +204,7 @@ body {
   line-height: 145%;
   color: #aac0e0;
   margin-top: 34px;
+  max-width: 570px;
 }
 @media (max-width: 992px) {
   .hero__text {
@@ -207,10 +216,12 @@ body {
 .section__story__container {
   display: flex;
   align-items: center;
+  margin-bottom: 72px;
 }
 @media (max-width: 1140px) {
   .section__story__container {
     flex-direction: column-reverse;
+    margin-bottom: clamp(1.1765rem, -0.0172rem + 6.3414vw, 4.2353rem);
   }
 }
 
@@ -223,7 +234,7 @@ body {
 }
 @media (max-width: 1140px) {
   .story__item_left .story__item__video {
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
   }
 }
 .story__item_left .story__item__video .story__video {
@@ -277,65 +288,38 @@ body {
   }
 }
 
-@media (max-width: 1140px) {
-  .section__features__container {
-    align-items: center;
-    position: relative;
-  }
+.section__features__container {
+  margin-bottom: clamp(1.1765rem, -0.5871rem + 8.8182vw, 6.8824rem);
 }
 
 .section__features-icon .features__icon {
   width: 34px;
+  height: 34px;
 }
 @media (max-width: 1140px) {
   .section__features-icon .features__icon {
-    width: clamp(1.1765rem, 0.6715rem + 2.6829vw, 2.4706rem);
-  }
-}
-@media (max-width: 1140px) {
-  .section__features-icon {
-    display: inline-block;
-    position: relative;
-    top: -10px;
-    left: 0px;
+    width: clamp(1.4118rem, 1.1618rem + 1.2499vw, 2rem);
+    height: clamp(1.4118rem, 1.1618rem + 1.2499vw, 2rem);
   }
 }
 
 .section__features-title {
   margin: 20px 0px 20px 0px;
-  position: relative;
-}
-.section__features-title::before {
-  content: "";
-  position: absolute;
-  top: -30px;
-  left: 0px;
-  width: 34px;
-  height: 34px;
-  background: url(/img/__features/features.svg);
-}
-@media (max-width: 1140px) {
-  .section__features-title::before {
-    top: 6px;
-    left: -35px;
-  }
 }
 
 .features {
   display: flex;
-  justify-content: space-between;
 }
 @media (max-width: 1140px) {
   .features {
     flex-direction: column;
-    align-items: center;
   }
 }
 
 .features__item_left {
   display: flex;
   flex-direction: column;
-  flex: 0 1 575px;
+  flex: 1 1 575px;
   width: 100%;
   margin-right: 10%;
 }
@@ -347,18 +331,22 @@ body {
 }
 
 .features__item_right {
-  flex: 0 2 auto;
+  flex: 1 2 auto;
+  text-align: end;
 }
 
-.features__container__img .features__img {
+.features__item__img .features__img {
   object-fit: cover;
   max-width: 100%;
+}
+@media (max-width: 1140px) {
+  .features__item__img .features__img {
+    min-width: 100%;
+  }
 }
 
 .accordion {
   flex: 1 0 auto;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
 }
 .accordion .accordion-item .accordion-button {
   font-weight: 700;
@@ -367,6 +355,11 @@ body {
   letter-spacing: -0.01em;
   color: #001731;
   opacity: 0.75;
+}
+@media (max-width: 1140px) {
+  .accordion .accordion-item .accordion-button {
+    font-size: clamp(0.8824rem, 0.7574rem + 0.625vw, 1.1765rem);
+  }
 }
 .accordion .accordion-item .accordion-button:hover {
   opacity: 1;
@@ -380,16 +373,33 @@ body {
   width: 30px;
   height: 30px;
 }
+.accordion .accordion-body {
+  font-size: 16px;
+}
+@media (max-width: 1140px) {
+  .accordion .accordion-body {
+    font-size: clamp(0.8235rem, 0.7735rem + 0.2501vw, 0.9412rem);
+  }
+}
 
 .quote .quote__item {
   display: flex;
   align-items: center;
-  height: 121px;
   background: #F7F7F7;
   border-radius: 12px;
 }
+@media (max-width: 600px) {
+  .quote .quote__item {
+    flex-direction: column;
+  }
+}
 .quote .quote__item__img {
   padding: 0px 7px 0px 15px;
+}
+@media (max-width: 600px) {
+  .quote .quote__item__info {
+    padding: 10px;
+  }
 }
 .quote .qoute__text {
   font-weight: 400;
@@ -405,6 +415,7 @@ body {
 }
 .quote .quote__author {
   margin-top: 8px;
+  font-size: 14px;
   font-weight: 700;
 }
 
