@@ -1,0 +1,83 @@
+
+
+body {
+    font-family: "Gilroy";
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+}
+
+// ===========================ограничивающий container-work=======================
+.container-work {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+//============================container__header==================================
+.container__header {
+  background: #001731;
+  min-height: 900px;
+  position: relative;
+}
+// ===========================container__main=====================================
+.container__main {
+    padding: 0px 80px;
+  
+    @media (max-width: 1440px) {
+      padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+      padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+    }
+}
+
+// ===========================общие стили colors================================
+$primary-color: #ffffff;
+$secondary-color: #398bff;
+$secondary-color-hover: #1760c5;
+
+// ========================общие стили button===================================
+
+.button {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+
+%button_style_primary {
+  color: $primary-color;
+  background: $secondary-color;
+  border: 3px solid rgba(0, 105, 253, 0.752);
+  border-radius: 4px;
+
+  &:hover {
+    background: $secondary-color-hover;
+  }
+}
+
+%button_style_secondary {
+  color: $secondary-color;
+  background: rgba(44, 130, 253, 0.15);
+  border-style: none;
+  border-radius: 4px;
+
+  &:hover {
+    background: $secondary-color-hover;
+    color: #ffffff;
+  }
+}
+
+// ============================общий стиль заголовков=============================
+
+.title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+  color: #001731;
+
+  @media (max-width: 1140px) {
+    font-size: clamp(1.1765rem, 0.6715rem + 2.6829vw, 2.4706rem);
+  }
+}
+

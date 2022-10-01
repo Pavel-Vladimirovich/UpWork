@@ -1,0 +1,115 @@
+.header__ellips {
+    position: absolute;
+    right: 200px;
+    bottom: 0px;
+    opacity: 0.75;
+    max-width: 100%;
+
+    @media (max-width: 1470px) {
+      right: 0px;
+      bottom: -60px;
+    }
+  }
+
+.header__screen {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    max-width: 700px;
+
+    @media (max-width: 1350px) {
+      max-width: 620px;
+      // max-width: calc(350px + (700 - 350) * ((100vw - 320px) / (1350 - 320)));
+
+    }
+
+    @media (max-width: 1270px) {
+      max-width: 520px;
+      // max-width: calc(350px + (620 - 350) * ((100vw - 320px) / (1270 - 320)));
+    }
+    @media (max-width: 1170px) {
+      max-width: 420px;
+      // max-width: calc(350px + (520 - 350) * ((100vw - 320px) / (1170 - 320)));
+    }
+    @media (max-width: 1100px) {
+      max-width: calc(350px + (420 - 350) * ((100vw - 320px) / (1100 - 320)));
+    }
+}
+
+
+.section__hero {
+    position: relative;
+  }
+  
+  .hero {
+    margin-top: 114px;
+    margin-left: 120px;
+    max-width: 745px;
+  
+    @media (max-width: 992px) {
+      margin: clamp(1.1765rem, -1.4565rem + 13.9881vw, 6.7059rem);
+    }
+  
+    &__title {
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 95%;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 34px;
+  
+      @media (max-width: 992px) {
+        font-size: clamp(1.7647rem, 0.5882rem + 6.25vw, 4.2353rem);
+        line-height: 100%;
+        margin-bottom: clamp(0.5882rem, -0.0841rem + 3.5715vw, 2rem);
+      }
+    }
+  
+    &__buttons {
+      .hero__button {
+        padding: 15px 22px;
+      }
+  
+      .button_primary {
+        @extend %button_style_primary;
+      }
+  
+      .button_secondary {
+        @extend %button_style_secondary;
+      }
+  
+      @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+  
+      .hero__text-between {
+        margin: 0px 14px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 145%;
+        color: rgba(255, 255, 255, 0.35);
+  
+        @media (max-width: 450px) {
+          display: none;
+        }
+      }
+    }
+  
+    &__text {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 145%;
+      color: #aac0e0;
+      margin-top: 34px;
+      max-width: 570px;
+  
+      @media (max-width: 992px) {
+        font-size: clamp(0.9412rem, 0.7732rem + 0.8928vw, 1.2941rem);
+        margin-top: clamp(0.5882rem, -0.0841rem + 3.5715vw, 2rem);
+      }
+    }
+  }

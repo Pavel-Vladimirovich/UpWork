@@ -1,0 +1,49 @@
+.container-fluid {
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    border-radius: 8px;
+  
+    & .nav-item {
+      padding-left: 24px;
+  
+      .nav-link {
+        color: $primary-color;
+  
+        &:hover {
+          opacity: 0.7;
+          transition: 0.3s all;
+        }
+      }
+    }
+  
+    .navbar__leng {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 16px;
+      margin-right: 40px;
+      border-style: none;
+      background: none;
+      color: #ffffff;
+  
+      & .navbar__option {
+        background: #001731;
+      }
+    }
+  }
+  
+  .navbar__auth {
+    gap: 8px;
+  
+    & .navbar__buuton {
+      padding: 8px 12px
+    }
+  
+    & .button_primary {
+      @extend %button_style_primary;
+    }
+  
+    & .button_secondary {
+      @extend %button_style_secondary;
+    }
+  }
