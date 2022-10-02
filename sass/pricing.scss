@@ -1,3 +1,72 @@
-.prising{
-    
+.section__pricing {}
+
+.section__pricing__container {}
+
+.pricing__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .pricing__header-item {
+
+        .pricing__title {}
+
+        .pricing__text {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0.01em;
+            color: rgba(0, 23, 49, 0.55);
+        }
+    }
+
+
 }
+
+.billing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px 30px;
+    background: #F7F7F7;
+    border-radius: 12px;
+
+
+    & .billing__item {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: rgba(0, 23, 49, 0.55);
+    }
+
+    & .active {
+        color: $secondary-color;
+    }
+}
+
+.switcher {
+    width: 42px;
+    height: 24px;
+    border-radius: 100px;
+    background: $secondary-color;
+    position: relative;
+
+    &__buttom {
+        position: absolute;
+        left: 2.3px;
+        top: 2.3px;
+        bottom: 2.3px;
+        width: 19px;
+        height: 19px;
+        background: #FFFFFF;
+        border-radius: 100%;
+    }
+}
+
+.pricing {}
+
+.pricing__item__row {}
+
+.pricing__colum {}

@@ -387,6 +387,7 @@ body {
   align-items: center;
   background: #F7F7F7;
   border-radius: 12px;
+  min-height: 120px;
 }
 @media (max-width: 600px) {
   .quote .quote__item {
@@ -396,9 +397,12 @@ body {
 .quote .quote__item__img {
   padding: 0px 7px 0px 15px;
 }
+.quote .quote__item__img .quote__img {
+  object-position: 0 -8px;
+}
 @media (max-width: 600px) {
   .quote .quote__item__info {
-    padding: 10px;
+    padding: 0px 15px 15px 15px;
   }
 }
 .quote .qoute__text {
@@ -429,25 +433,76 @@ body {
   }
 }
 
-.block {
+.pricing__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pricing__header .pricing__header-item .pricing__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  color: rgba(0, 23, 49, 0.55);
+}
+
+.billing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 30px;
+  background: #F7F7F7;
+  border-radius: 12px;
+}
+.billing .billing__item {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: rgba(0, 23, 49, 0.55);
+}
+.billing .active {
+  color: #398bff;
+}
+
+.switcher {
+  width: 42px;
+  height: 24px;
+  border-radius: 100px;
+  background: #398bff;
+  position: relative;
+}
+.switcher__buttom {
+  position: absolute;
+  left: 2.3px;
+  top: 2.3px;
+  bottom: 2.3px;
+  width: 19px;
+  height: 19px;
+  background: #FFFFFF;
+  border-radius: 100%;
+}
+
+.block1 {
   margin-top: 100px;
   display: flex;
 }
-.block .style__item {
+.block1 .style__item {
   background-color: #1760c5;
   width: 300px;
   border: 1px dashed black;
 }
-.block .items1 {
+.block1 .items1 {
   flex: 1 2 auto;
 }
-.block .items2 {
+.block1 .items2 {
   flex: 1 1 auto;
 }
-.block .items3 {
+.block1 .items3 {
   flex: 1 1 auto;
 }
-.block .items4 {
+.block1 .items4 {
   flex: 1 1 auto;
 }
 

@@ -111,6 +111,7 @@
         align-items: center;
         background: #F7F7F7;
         border-radius: 12px;
+        min-height: 120px;
 
         @media (max-width: 600px) {
             flex-direction: column;
@@ -119,13 +120,15 @@
 
     .quote__item__img {
         padding: 0px 7px 0px 15px;
+        & .quote__img {
+            object-position: 0 -8px;
 
-        & .quote__img {}
+        }
     }
 
     .quote__item__info {
         @media (max-width: 600px) {
-            padding: 10px;
+            padding: 0px 15px 15px 15px;
         }
 
     }
@@ -161,3 +164,5 @@
 .button_primary {
     @extend %button_style_primary
 }
+
+
