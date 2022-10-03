@@ -1,4 +1,7 @@
-
+ul,ol,li{
+  list-style: none;
+  padding-left: 0px !important;
+}
 
 body {
     font-family: "Gilroy";
@@ -20,6 +23,8 @@ body {
   background: #001731;
   min-height: 900px;
   position: relative;
+  overflow: hidden;
+
 }
 // ===========================container__main=====================================
 .container__main {
@@ -43,7 +48,12 @@ $secondary-color-hover: #1760c5;
   font-size: 18px;
   letter-spacing: 0.01em;
 }
-
+.button_primary {
+  @extend %button_style_primary;
+}
+.button_secondary {
+  @extend %button_style_secondary;
+}
 %button_style_primary {
   color: $primary-color;
   background: $secondary-color;
