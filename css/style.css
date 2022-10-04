@@ -46,8 +46,10 @@ body {
   background: #398bff;
   border: 3px solid rgba(0, 105, 253, 0.752);
   border-radius: 4px;
+  transition: 0.3s all;
 }
 .button_primary:hover {
+  color: #ffffff;
   background: #1760c5;
 }
 
@@ -56,6 +58,7 @@ body {
   background: rgba(44, 130, 253, 0.15);
   border-style: none;
   border-radius: 4px;
+  transition: 0.3s all;
 }
 .button_secondary:hover {
   background: #1760c5;

@@ -59,8 +59,10 @@ $secondary-color-hover: #1760c5;
   background: $secondary-color;
   border: 3px solid rgba(0, 105, 253, 0.752);
   border-radius: 4px;
+  transition: .3s all;
 
   &:hover {
+    color: $primary-color;
     background: $secondary-color-hover;
   }
 }
@@ -70,6 +72,8 @@ $secondary-color-hover: #1760c5;
   background: rgba(44, 130, 253, 0.15);
   border-style: none;
   border-radius: 4px;
+  transition: .3s all;
+
 
   &:hover {
     background: $secondary-color-hover;
