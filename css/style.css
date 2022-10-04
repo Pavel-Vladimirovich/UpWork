@@ -454,6 +454,10 @@ body {
   }
 }
 
+.section__pricing__container {
+  margin-bottom: 100px;
+}
+
 .pricing__header {
   display: flex;
   flex-wrap: wrap;
@@ -722,6 +726,31 @@ body {
   .price__item-subname {
     margin-top: clamp(0.625rem, -0.6332rem + 5.9211vw, 3.4375rem);
   }
+}
+
+.learn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 720px;
+  background: #031E3E;
+  position: relative;
+}
+.learn__item {
+  border: 1px dashed red;
+}
+.learn__item img {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.learn__title {
+  color: white;
+}
+
+.learn__text {
+  color: white;
 }
 
 .block1 {

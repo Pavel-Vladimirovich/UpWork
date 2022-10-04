@@ -1,0 +1,34 @@
+.section__learn {
+}
+.section__learn__container {
+}
+.learn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 720px;
+    background: #031E3E;
+    position: relative;
+    &__item {
+        img{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+        border: 1px dashed red;
+    }
+}
+
+.learn__icon {
+}
+.learn__title {
+    color: white;
+}
+.learn__text {
+    color: white;
+
+}
+.learn__button {
+}
+.button_primary {
+}
