@@ -4,11 +4,21 @@
 
 .pricing__header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px;
     align-items: center;
+    margin-bottom: 47px;
+    @media (max-width: 900px) {
+        gap:0px;
+        margin-bottom: 20px;
+    }
 
     .pricing__header-item {
 
+        @media (max-width: 900px) {
+            min-width: 100%;
+        }
         .pricing__title {}
 
         .pricing__text {
@@ -17,6 +27,9 @@
             line-height: 28px;
             letter-spacing: 0.01em;
             color: rgba(0, 23, 49, 0.55);
+            @media (max-width: 1140px) {
+                font-size: clamp(1rem, 0.8938rem + 0.5000vw, 1.25rem);
+            }
         }
     }
 
@@ -31,7 +44,13 @@
     padding: 20px 30px;
     background: #F7F7F7;
     border-radius: 12px;
+    cursor: pointer;
 
+    &.active {
+        .switcher__buttom {
+            left: 20px;
+        }
+    }
 
     & .billing__item {
         font-weight: 600;
@@ -44,6 +63,7 @@
     & .active {
         color: $secondary-color;
     }
+
 }
 
 .switcher {
@@ -62,20 +82,34 @@
         height: 19px;
         background: #FFFFFF;
         border-radius: 100%;
+        transition: .3s all;
     }
 }
 
 .price {
     display: flex;
     gap: 30px;
+
+    @media (max-width: 1320px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .price__item {
     background: #FFFFFF;
     box-shadow: 0px 4px 15px rgba(10, 17, 85, 0.1);
     border-radius: 12px;
-    width: 470px;
+    flex: 0 1 470px;
     padding: 27px 24px 27px 24px;
+
+    @media (max-width: 1320px) {
+        flex: 0 1 48%;
+    }
+
+    @media (max-width: 1100px) {
+        min-width: 100%;
+    }
 
     .price__item-name {
         font-weight: 700;
@@ -118,7 +152,8 @@
         span {
             font-weight: 600;
             font-size: 20px;
-            color: rgba(0, 23, 49, 0.55)
+            color: rgba(0, 23, 49, 0.55);
+            margin-left: 4px;
         }
     }
 
@@ -138,11 +173,18 @@
         letter-spacing: 0.01em;
         color: #6A6A6A;
         margin-bottom: 22px;
+
+        @media (max-width: 1100px) {
+            font-size: clamp(0.875rem, 0.7632rem + 0.5263vw, 1.125rem);
+        }
     }
 
     .price__item-button {
         margin-bottom: 48px;
 
+        @media (max-width: 1100px) {
+            margin-bottom: clamp(1.75rem, 1.1908rem + 2.6316vw, 3rem);
+        }
     }
 
     .buttom__price {
@@ -160,6 +202,10 @@
 .price__list {
     .price__list-item:not(:last-child) {
         margin-bottom: 40px;
+
+        @media (max-width: 1100px) {
+            margin-bottom: clamp(1.25rem, 0.6908rem + 2.6316vw, 2.5rem);
+        }
     }
 
     .price__list-item {
@@ -170,13 +216,15 @@
     .price__list-item--img {}
 
     .price__list-item--text {
-        // align-content: flex-start;
         margin-left: 16px;
         font-weight: 700;
         font-size: 20px;
         line-height: 25px;
         color: rgba(0, 23, 49, 0.55);
 
+        @media (max-width: 1100px) {
+            font-size: clamp(1rem, 0.8882rem + 0.5263vw, 1.25rem);
+        }
     }
 
     .price__list-item--icon {
@@ -202,52 +250,51 @@
         position: absolute;
         top: 21px;
         right: -13px;
+
+        @media (max-width:420px) {
+            top: 65px;
+        }
     }
 
     .price__item-name {
         span {
             color: #FFFFFF;
-            background: #031E3E;
+            background: transparent;
             border-radius: .25rem;
             border: 1px solid white;
         }
     }
 
-    .price__item-oldprice {}
-
     .price__item-price {
         color: inherit;
+
+        span {
+            color: inherit;
+        }
     }
 
     .price__item-period {
         color: inherit;
-
     }
 
     .price__item-text {
         color: inherit;
-
     }
-
-    .button_primary {}
-
-    .price__list {}
-
-    .price__list-item {}
-
-    .price__list-item--img {}
 
     .price__list-item--text {
         color: inherit;
-
     }
-
-    .price__list-item--icon {}
 }
 
-
-
-.price__item-soon {
+.price__item-subname {
+    margin-top: 55px; // I don't shure
     margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #001731;
 
+    @media (max-width: 1100px) {
+        margin-top: clamp(0.625rem, -0.6332rem + 5.9211vw, 3.4375rem);
+    }
 }
