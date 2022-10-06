@@ -1,41 +1,51 @@
-ul,ol,li{
+ul,
+ol,
+li {
   list-style: none;
   padding-left: 0px !important;
 }
 
 body {
-    font-family: "Gilroy";
-    color: #ffffff;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
+  font-family: "Gilroy";
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
 }
 
 // ===========================ограничивающий container-work=======================
 .container-work {
   max-width: 1440px;
-  margin: 0 auto;
+  margin-inline: auto;
+  padding: 0px 80px;
+
+  @media (max-width: 1440px) {
+    padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+    padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+  }
 }
+
 //============================container__header==================================
-.container__header {
+.section__header__container {
+  max-width: 1440px;
+  margin-inline: auto;
   background: #001731;
   min-height: 900px;
   position: relative;
   overflow: hidden;
-
 }
+
 // ===========================container__main=====================================
-.container__main {
-    padding: 0px 80px;
-  
-    @media (max-width: 1440px) {
-      padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
-      padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
-    }
+.container__main {}
+//============================container__learn====================================
+.section__learn__container{
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #031E3E;
+  padding: 0px 80px;
 }
-
 // ===========================общие стили colors================================
 $primary-color: #ffffff;
 $secondary-color: #398bff;
@@ -48,18 +58,22 @@ $secondary-color-hover: #1760c5;
   font-size: 18px;
   letter-spacing: 0.01em;
 }
+
 .button_primary {
   @extend %button_style_primary;
 }
+
 .button_secondary {
   @extend %button_style_secondary;
 }
+
 %button_style_primary {
   color: $primary-color;
   background: $secondary-color;
   border: 3px solid rgba(0, 105, 253, 0.752);
   border-radius: 4px;
   transition: .3s all;
+  text-decoration: none;
 
   &:hover {
     color: $primary-color;
@@ -94,4 +108,3 @@ $secondary-color-hover: #1760c5;
     font-size: clamp(2rem, 1.7344rem + 1.2500vw, 2.625rem);
   }
 }
-

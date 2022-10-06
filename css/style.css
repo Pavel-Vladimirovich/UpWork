@@ -1,4 +1,6 @@
-ul, ol, li {
+ul,
+ol,
+li {
   list-style: none;
   padding-left: 0px !important;
 }
@@ -15,24 +17,30 @@ body {
 
 .container-work {
   max-width: 1440px;
-  margin: 0 auto;
+  margin-inline: auto;
+  padding: 0px 80px;
+}
+@media (max-width: 1440px) {
+  .container-work {
+    padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+    padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+  }
 }
 
-.container__header {
+.section__header__container {
+  max-width: 1440px;
+  margin-inline: auto;
   background: #001731;
   min-height: 900px;
   position: relative;
   overflow: hidden;
 }
 
-.container__main {
+.section__learn__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #031E3E;
   padding: 0px 80px;
-}
-@media (max-width: 1440px) {
-  .container__main {
-    padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
-    padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
-  }
 }
 
 .button {
@@ -47,6 +55,7 @@ body {
   border: 3px solid rgba(0, 105, 253, 0.752);
   border-radius: 4px;
   transition: 0.3s all;
+  text-decoration: none;
 }
 .button_primary:hover {
   color: #ffffff;
@@ -728,29 +737,53 @@ body {
   }
 }
 
+.section__learn__container {
+  margin-bottom: 100px;
+}
+
 .learn {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  min-height: 720px;
-  background: #031E3E;
-  position: relative;
+  justify-content: space-between;
+  gap: 112px;
+  border: 1px dashed red;
+}
+@media (max-width: 1440px) {
+  .learn {
+    gap: clamp(2.9412rem, -15.2938rem + 25.8329vw, 6.5882rem);
+  }
 }
 .learn__item {
   border: 1px dashed red;
+  padding-top: 74px;
 }
-.learn__item img {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
+.learn__item .learn__img {
+  border: 1px dashed rgb(3, 173, 252);
+  object-fit: cover;
+  object-position: -19px 0px;
+  max-width: 100%;
+}
+
+.learn__icon {
+  margin-bottom: 24px;
 }
 
 .learn__title {
-  color: white;
+  font-size: 44px;
+  color: #FFFFFF;
 }
 
 .learn__text {
-  color: white;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 145%;
+  color: #AAC0E0;
+}
+
+.learn__button {
+  display: inline-block;
+  padding: 15px 22px;
 }
 
 .block1 {
