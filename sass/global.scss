@@ -39,13 +39,20 @@ body {
 
 // ===========================container__main=====================================
 .container__main {}
+
 //============================container__learn====================================
-.section__learn__container{
+.section__learn__container {
   max-width: 1440px;
   margin: 0 auto;
   background: #031E3E;
   padding: 0px 80px;
+
+  @media (max-width: 1440px) {
+    padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+    padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+  }
 }
+
 // ===========================общие стили colors================================
 $primary-color: #ffffff;
 $secondary-color: #398bff;
@@ -74,10 +81,15 @@ $secondary-color-hover: #1760c5;
   border-radius: 4px;
   transition: .3s all;
   text-decoration: none;
+  text-align: center;
 
   &:hover {
     color: $primary-color;
     background: $secondary-color-hover;
+  }
+
+  @media (max-width: 450px) {
+    min-width: 100%;
   }
 }
 
@@ -106,5 +118,15 @@ $secondary-color-hover: #1760c5;
 
   @media (max-width: 1140px) {
     font-size: clamp(2rem, 1.7344rem + 1.2500vw, 2.625rem);
+  }
+}
+// ============================общий стиль иконок заголовков=======================
+.icon {
+  width: 32px;
+  height: 32px;
+
+  @media (max-width: 1140px) {
+    width: clamp(1.4118rem, 1.1618rem + 1.2499vw, 2rem);
+    height: clamp(1.4118rem, 1.1618rem + 1.2499vw, 2rem);
   }
 }

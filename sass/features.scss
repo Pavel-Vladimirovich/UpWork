@@ -1,19 +1,13 @@
-.section__features {}
+.section__features {
+    
+}
 
 .section__features__container {
     margin-bottom: clamp(1.1765rem, -0.5871rem + 8.8182vw, 6.8824rem);
 }
 
 .section__features-icon {
-    & .features__icon {
-        width: 34px;
-        height: 34px;
-
-        @media (max-width: 1140px) {
-            width: clamp(1.4118rem, 1.1618rem + 1.2499vw, 2rem);
-            height: clamp(1.4118rem, 1.1618rem + 1.2499vw, 2rem);
-        }
-    }
+   
 }
 
 .section__features-title {

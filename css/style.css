@@ -42,6 +42,12 @@ body {
   background: #031E3E;
   padding: 0px 80px;
 }
+@media (max-width: 1440px) {
+  .section__learn__container {
+    padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+    padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+  }
+}
 
 .button {
   font-weight: 700;
@@ -56,10 +62,16 @@ body {
   border-radius: 4px;
   transition: 0.3s all;
   text-decoration: none;
+  text-align: center;
 }
 .button_primary:hover {
   color: #ffffff;
   background: #1760c5;
+}
+@media (max-width: 450px) {
+  .navbar__auth .button_primary, .button_primary {
+    min-width: 100%;
+  }
 }
 
 .navbar__auth .button_secondary, .button_secondary {
@@ -84,6 +96,17 @@ body {
 @media (max-width: 1140px) {
   .title {
     font-size: clamp(2rem, 1.7344rem + 1.25vw, 2.625rem);
+  }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+@media (max-width: 1140px) {
+  .icon {
+    width: clamp(1.4118rem, 1.1618rem + 1.2499vw, 2rem);
+    height: clamp(1.4118rem, 1.1618rem + 1.2499vw, 2rem);
   }
 }
 
@@ -322,17 +345,6 @@ body {
   margin-bottom: clamp(1.1765rem, -0.5871rem + 8.8182vw, 6.8824rem);
 }
 
-.section__features-icon .features__icon {
-  width: 34px;
-  height: 34px;
-}
-@media (max-width: 1140px) {
-  .section__features-icon .features__icon {
-    width: clamp(1.4118rem, 1.1618rem + 1.2499vw, 2rem);
-    height: clamp(1.4118rem, 1.1618rem + 1.2499vw, 2rem);
-  }
-}
-
 .section__features-title {
   margin: 20px 0px 20px 0px;
 }
@@ -464,7 +476,7 @@ body {
 }
 
 .section__pricing__container {
-  margin-bottom: 100px;
+  margin-bottom: clamp(1.1765rem, -0.5871rem + 8.8182vw, 6.8824rem);
 }
 
 .pricing__header {
@@ -605,11 +617,21 @@ body {
   color: #001731;
   margin-bottom: 17px;
 }
+@media (max-width: 1140px) {
+  .price__item .price__item-price {
+    font-size: clamp(2rem, 1.7344rem + 1.25vw, 2.625rem);
+  }
+}
 .price__item .price__item-price span {
   font-weight: 600;
   font-size: 20px;
   color: rgba(0, 23, 49, 0.55);
   margin-left: 4px;
+}
+@media (max-width: 1140px) {
+  .price__item .price__item-price span {
+    font-size: clamp(0.8824rem, 0.7574rem + 0.625vw, 1.1765rem);
+  }
 }
 .price__item .price__item-period {
   font-weight: 600;
@@ -660,6 +682,12 @@ body {
 .price__list .price__list-item {
   display: flex;
   align-items: center;
+}
+@media (max-width: 420px) {
+  .price__list .price__list-item--img img {
+    width: 32px;
+    height: 32px;
+  }
 }
 .price__list .price__list-item--text {
   margin-left: 16px;
@@ -746,22 +774,30 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 112px;
-  border: 1px dashed red;
 }
 @media (max-width: 1440px) {
   .learn {
-    gap: clamp(2.9412rem, -15.2938rem + 25.8329vw, 6.5882rem);
+    gap: clamp(1.1765rem, -25.882rem + 38.3329vw, 6.5882rem);
+  }
+}
+@media (max-width: 1100px) {
+  .learn {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
   }
 }
 .learn__item {
-  border: 1px dashed red;
   padding-top: 74px;
 }
-.learn__item .learn__img {
-  border: 1px dashed rgb(3, 173, 252);
-  object-fit: cover;
-  object-position: -19px 0px;
-  max-width: 100%;
+@media (max-width: 1100px) {
+  .learn__item {
+    padding-top: clamp(1.1765rem, -0.2445rem + 7.1051vw, 4.3529rem);
+  }
+}
+@media (max-width: 1270px) {
+  .learn__item .learn__img {
+    width: 100%;
+  }
 }
 
 .learn__icon {
@@ -769,7 +805,6 @@ body {
 }
 
 .learn__title {
-  font-size: 44px;
   color: #FFFFFF;
 }
 
@@ -779,6 +814,11 @@ body {
   font-size: 20px;
   line-height: 145%;
   color: #AAC0E0;
+}
+@media (max-width: 1140px) {
+  .learn__text {
+    font-size: clamp(1rem, 0.8938rem + 0.5vw, 1.25rem);
+  }
 }
 
 .learn__button {
