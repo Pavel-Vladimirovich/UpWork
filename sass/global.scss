@@ -19,12 +19,16 @@ body {
 .container-work {
   max-width: 1440px;
   margin-inline: auto;
+  // margin-bottom: 100px;
   padding: 0px 80px;
 
   @media (max-width: 1440px) {
     padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
     padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
   }
+}
+.container-work_background-dark {
+  background: #031E3E;
 }
 
 //============================container__header==================================
@@ -36,23 +40,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
-// ===========================container__main=====================================
-.container__main {}
-
-//============================container__learn====================================
-.section__learn__container {
-  max-width: 1440px;
-  margin: 0 auto;
-  background: #031E3E;
-  padding: 0px 80px;
-
-  @media (max-width: 1440px) {
-    padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
-    padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
-  }
-}
-
 // ===========================общие стили colors================================
 $primary-color: #ffffff;
 $secondary-color: #398bff;
@@ -111,14 +98,10 @@ $secondary-color-hover: #1760c5;
 
 .title {
   font-weight: 700;
-  font-size: 42px;
+  font-size: clamp(1.4706rem, 1.2292rem + 1.4655vw, 2.4706rem);
   line-height: 110%;
   letter-spacing: -0.03em;
   color: #001731;
-
-  @media (max-width: 1140px) {
-    font-size: clamp(2rem, 1.7344rem + 1.2500vw, 2.625rem);
-  }
 }
 // ============================общий стиль иконок заголовков=======================
 .icon {
