@@ -1,13 +1,14 @@
 .section__review-container {
     background: #F6F7FB;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: clamp(1.25rem, -0.1786rem + 7.5893vw, 6.25rem);
+    padding-bottom: clamp(1.25rem, -0.1786rem + 7.5893vw, 6.25rem);
+
 }
 
 .review__header {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: clamp(1.25rem, 0.8929rem + 1.8973vw, 2.5rem);
 
     .review__link {
         margin-left: auto;
@@ -22,14 +23,25 @@
 
 .review {
     display: flex;
-    gap: 30px;
+    gap: clamp(0.8824rem, 0.6303rem + 1.3392vw, 1.7647rem);
+
+    @media (max-width: 920px) {
+        flex-wrap: wrap;
+    }
 
     &__item {
+        display: flex;
+        flex-direction: column;
         flex: 0 1 33.3333%;
-        padding: 32px;
+        padding: clamp(0.8824rem, 0.5967rem + 1.5179vw, 1.8824rem);
         background: #FFFFFF;
         box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
         border-radius: 12px;
+
+        @media (max-width: 920px) {
+            flex: 0 1 auto;
+            min-width: 100px;
+        }
     }
 }
 
@@ -38,8 +50,6 @@
     align-items: center;
     gap: 16px;
     margin-bottom: 16px;
-    flex: 0 1 auto;
-
 }
 
 .review__info-item {}
@@ -47,7 +57,7 @@
 .review__titles {
     .review__title {
         font-weight: 700;
-        font-size: 20px;
+        font-size: clamp(1rem, 0.9496rem + 0.2679vw, 1.1765rem);
         line-height: 100%;
         letter-spacing: -0.03em;
         color: #001731;
@@ -68,18 +78,17 @@
 .review__text {
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: clamp(0.8235rem, 0.7899rem + 0.1787vw, 0.9412rem);
     line-height: 26px;
     color: #001731;
     opacity: 0.75;
     margin-bottom: 25px;
-    flex: 1 1 auto;
 }
 
 .review__footer {
     display: flex;
     justify-content: space-between;
-    flex: 0 1 auto;
+    margin-top: auto;
 
     .review__footer-item {
         font-weight: 500;

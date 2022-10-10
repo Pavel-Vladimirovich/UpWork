@@ -2,19 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 112px;
-    @media (max-width:1440px) {
-        gap: clamp(1.1765rem, -25.8820rem + 38.3329vw, 6.5882rem);
-    }
+    gap: clamp(1.1765rem, -25.8820rem + 38.3329vw, 6.5882rem);
+
     @media (max-width:1100px) {
         flex-wrap: wrap-reverse;
         justify-content: center;
     }
     &__item {
-        padding-top: 74px;
-        @media (max-width:1100px) {
-            padding-top: clamp(1.1765rem, -0.2445rem + 7.1051vw, 4.3529rem);
-        }
+        padding-top: clamp(1.1765rem, -0.2445rem + 7.1051vw, 4.3529rem);
         .learn__img {
             @media (max-width: 1270px) {
                 width: 100%;

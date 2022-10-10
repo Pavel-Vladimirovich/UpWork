@@ -1,9 +1,7 @@
-.section__story__container {
+.story {
     display: flex;
     align-items: center;
-    margin-bottom: 72px;
-    // border: 2px solid red;
-  
+    margin-bottom: 72px;  
   
     @media (max-width: 1140px) {
       flex-direction: column-reverse;
@@ -46,7 +44,6 @@
   
         p:not(:last-child) {
           margin-bottom: 10px;
-  
         }
       }
   
@@ -74,6 +71,4 @@
         }
       }
     }
-  
-  
   }
