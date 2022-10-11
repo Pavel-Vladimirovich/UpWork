@@ -1,13 +1,6 @@
-.section__features {
-    
-}
 
-.section__features__container {
+.container-features {
     margin-bottom: clamp(1.1765rem, -0.5871rem + 8.8182vw, 6.8824rem);
-}
-
-.section__features-icon {
-   
 }
 
 .section__features-title {
@@ -56,8 +49,6 @@
 
 .accordion {
     flex: 1 0 auto;
-    // background: #FFFFFF;
-    // box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
 
     & .accordion-item {
         & .accordion-button {

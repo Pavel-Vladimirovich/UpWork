@@ -3,11 +3,16 @@ ol,
 li {
   list-style: none;
   padding-left: 0px !important;
+  // margin-bottom: 0px !important;
 }
+// ===========================общие стили colors================================
+$primary-color: #ffffff;
+$secondary-color: #398bff;
+$secondary-color-hover: #1760c5;
 
 body {
   font-family: "Gilroy";
-  color: #ffffff;
+  color: $primary-color;
   font-style: normal;
   font-weight: 600;
   font-size: 17px;
@@ -19,16 +24,12 @@ body {
 .container-work {
   max-width: 1440px;
   margin-inline: auto;
-  // margin-top: 100px;
   padding: 0px 80px;
 
   @media (max-width: 1440px) {
     padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
     padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
   }
-}
-.container-work_background-dark {
-  background: #031E3E;
 }
 
 //============================container__header==================================
@@ -40,10 +41,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-// ===========================общие стили colors================================
-$primary-color: #ffffff;
-$secondary-color: #398bff;
-$secondary-color-hover: #1760c5;
+
 
 // ========================общие стили button===================================
 
@@ -64,7 +62,8 @@ $secondary-color-hover: #1760c5;
 %button_style_primary {
   color: $primary-color;
   background: $secondary-color;
-  border: 3px solid rgba(0, 105, 253, 0.752);
+  // border: 3px solid rgba(0, 105, 253, 0.752);
+  border-style: none;
   border-radius: 4px;
   transition: .3s all;
   text-decoration: none;
