@@ -6,12 +6,13 @@
 
 .footer {
 	display: flex;
-	justify-content: space-between;
+	// justify-content: space-between;
 }
 
 .footer__item {
 	display: flex;
 	gap: 100px;
+	margin-left: auto;
 }
 
 .footer__list {
@@ -58,16 +59,53 @@
 .footer__form-label {}
 
 .footer__form-input {
-	width: 270px;
-	height: 37px;
+	width: 370px;
+	// height: 55px;
 	background: #FFFFFF;
 	border-radius: 8px;
 	color: #CCCCCC;
-	padding-left: 12px;
+	padding: 12px;
+	border: 2px solid transparent ;
+	&:hover{
+		border: 2px solid $secondary-color;
+	}
+	&:focus{
+		color: black;
+		outline: none;
+	}
 }
 
 .footer_form-button {
-	width: 99px;
-	height: 38px;
+	// width: 99px;
+	// height: 38px;
 	border-radius: 8px;
+	padding: 12px;
 }
+
+.footer__copy {
+	display: flex;
+	justify-content: space-between;
+	// align-items: ;
+	// padding-bottom: 27px;
+	border: solid 1px red;
+
+}
+
+.footer__copy-item {
+	font-weight: 400;
+	font-size: 16px;
+	color: #FFFFFF;
+	opacity: 0.7;
+	border: dashed 1px red;
+
+}
+
+.copy__list {
+	display: flex;
+	gap: 28px;
+	border: dashed 1px rgb(52, 255, 2);
+	.copy__list-item {
+		
+	}
+}
+
