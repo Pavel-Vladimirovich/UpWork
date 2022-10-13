@@ -8,10 +8,11 @@
 	display: flex;
 	gap: 30px;
 
-	@media (max-width:1024px) {
+	@media (max-width: 992px) {
 		flex-wrap: wrap-reverse;
 		justify-content: start;
 	}
+
 }
 
 .footer__item {
@@ -19,7 +20,7 @@
 	gap: clamp(1.7647rem, 0.5882rem + 6.2501vw, 5.8824rem);
 	margin-left: auto;
 
-	@media (max-width:1024px) {
+	@media (max-width:992px) {
 		margin-left: 0;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -96,7 +97,7 @@
 		border: 2px solid $secondary-color;
 	}
 
-	@media (max-width: 450px) {
+	@media (max-width: 576px) {
 		min-width: 100%;
 	}
 }

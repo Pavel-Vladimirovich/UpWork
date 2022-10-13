@@ -8,32 +8,6 @@
 @import 'learn';
 @import 'reviews';
 @import 'footer';
+@import 'breakpoints';
 
-
-.block1 {
-  margin-top: 100px;
-  display: flex;
-
-  .style__item {
-    background-color: #1760c5;
-    width: 300px;
-    border: 1px dashed black;
-  }
-
-  .items1 {
-    flex: 1 2 auto;
-  }
-
-  .items2 {
-    flex: 1 1 auto;
-  }
-
-  .items3 {
-    flex: 1 1 auto;
-  }
-
-  .items4 {
-    flex: 1 1 auto;
-  }
-}
 

@@ -3,7 +3,6 @@ ol,
 li {
   list-style: none;
   padding-left: 0px !important;
-  // margin-bottom: 0px !important;
 }
 // ===========================общие стили colors================================
 $primary-color: #ffffff;
@@ -11,7 +10,7 @@ $secondary-color: #398bff;
 $secondary-color-hover: #1760c5;
 
 body {
-  font-family: "Gilroy";
+  font-family: "Gilroy" sans-serif;
   color: $primary-color;
   font-style: normal;
   font-weight: 600;
@@ -24,24 +23,9 @@ body {
 .container-work {
   max-width: 1440px;
   margin-inline: auto;
-  padding: 0px 80px;
-
-  @media (max-width: 1440px) {
-    padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
-    padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
-  }
+  padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
+  padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
 }
-
-//============================container__header==================================
-.section__header__container {
-  max-width: 1440px;
-  margin-inline: auto;
-  background: #001731;
-  min-height: 900px;
-  position: relative;
-  overflow: hidden;
-}
-
 
 // ========================общие стили button===================================
 
@@ -74,7 +58,7 @@ body {
     background: $secondary-color-hover;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 576px) {
     min-width: 100%;
   }
 }
