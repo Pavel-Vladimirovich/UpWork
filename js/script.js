@@ -31,3 +31,24 @@ for (let i = 0; i < acc.length; i++) {
 	  } 
 	});
   }
+
+
+let block = document.querySelectorAll('.block__item');
+
+// block.addEventListener("click", ()=>{
+// 	block[1].classList.add('active_block')
+// });
+
+for(let i=0; i<block.length; i++){
+	block[i].onclick = ()=> {
+		block[i].classList.add('active_block')
+		if(block[0].classList.contains('active_block')){
+			block[1].classList.remove('active_block')
+		}else{
+			block[0].classList.remove('active_block')
+			block[1].classList.add('active_block')
+
+		}
+		
+	}
+}
