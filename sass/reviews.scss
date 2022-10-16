@@ -2,6 +2,7 @@
     background: #F6F7FB;
     padding-top: clamp(1.25rem, -0.1786rem + 7.5893vw, 6.25rem);
     padding-bottom: clamp(1.25rem, -0.1786rem + 7.5893vw, 6.25rem);
+    margin-bottom: clamp(1.1765rem, -0.5871rem + 8.8182vw, 6.8824rem);
 }
 
 .review__header {
@@ -54,7 +55,7 @@
 .review__info-item {}
 
 .review__titles {
-    .review__title {
+    &__title {
         font-weight: 700;
         font-size: clamp(1rem, 0.9496rem + 0.2679vw, 1.1765rem);
         line-height: 100%;
@@ -63,7 +64,7 @@
         margin-bottom: 8px;
     }
 
-    .review__subtitle {
+    &__subtitle {
         font-weight: 500;
         font-size: 14px;
         line-height: 100%;
@@ -89,7 +90,7 @@
     justify-content: space-between;
     margin-top: auto;
 
-    .review__footer-item {
+    &__footer-item {
         font-weight: 500;
         font-size: 14px;
         line-height: 100%;

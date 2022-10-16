@@ -1,0 +1,109 @@
+.section__questions {
+}
+.container-work {
+}
+.question__header {
+   margin-bottom: clamp(1.1765rem, 0.5042rem + 3.5714vw, 3.5294rem); // решить вопрос с отступом фактически 70px, а надо 60px
+}
+.question__icon {
+    margin-bottom: 24px;
+}
+
+.question__title {
+}
+
+.question {
+}
+
+
+
+
+
+// https://html5css.ru/howto/howto_js_accordion.php
+.accordion {
+    border: 1px solid #E5E5E5;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    padding: 24px;
+    min-width: 100%;
+    text-align: left;
+    color: #001731;
+    outline: none;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    transition: 0.4s;
+    position: relative;
+    // margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        background: #031E3E;
+        color: #FFFFFF;    
+    }
+}
+.accordion:before,
+.accordion:after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    right: 30px;
+    display: inline-block;
+    transition: .4s;
+}
+.accordion:hover:before,
+.accordion:hover:after{
+    background-color: #FFFFFF;
+}
+.accordion:after{
+    transform: rotate(-90deg);
+}
+
+.active:after {
+    transform: rotate(0deg);
+    background-color: #ffffff;
+}
+
+.active {
+    background: #031E3E;
+    color: #FFFFFF;
+    // border-bottom-left-radius: 0px;
+    // border-bottom-right-radius: 0px;
+}
+
+.panel {
+    background: #FFFFFF;
+    // box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
+    // border-bottom-left-radius: 6px;
+    // border-bottom-right-radius: 6px;
+    padding: 25px 18px 0px 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+
+
+.block {
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.block__item {
+    cursor: pointer;
+    user-select: none;
+    border-radius: .5rem;
+    border: gray 1px solid;
+    text-align: center;
+}
+.active_block{
+    background-color: red;
+}

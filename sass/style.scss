@@ -6,66 +6,7 @@
 @import 'pricing';
 @import 'learn';
 @import 'reviews';
+@import 'faq';
 @import 'footer';
 @import 'breakpoints';
 
-// https://html5css.ru/howto/howto_js_accordion.php
-.accordion {
-    border: 1px solid #E5E5E5;
-    border-radius: 12px;
-    background: white;
-    cursor: pointer;
-    padding: 24px;
-    min-width: 100%;
-    // border-style: none;
-    text-align: left;
-    color: #001731;
-    outline: none;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    transition: 0.4s;
-    // border-top-left-radius: 6px;
-    // border-top-right-radius: 6px;
-    margin-bottom: 20px;
-
-    &:hover {
-        // background-color: #ccc;
-    }
-}
-
-.active {
-    // background-color: #ccc;
-    // border-bottom: 1px solid #EDF1F6;
-}
-
-.panel {
-    background: #FFFFFF;
-    box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    padding: 0px 18px;
-    // max-width: 500px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
-.block {
-    border: 1px solid black;
-    border-radius: .5rem;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.block__item {
-    cursor: pointer;
-    user-select: none;
-    border-radius: .5rem;
-    border: gray 1px solid;
-    text-align: center;
-}
-.active_block{
-    background-color: red;
-}
