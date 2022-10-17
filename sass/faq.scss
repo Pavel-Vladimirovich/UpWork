@@ -3,7 +3,7 @@
 }
 
 .question__header {
-    margin-bottom: clamp(1.1765rem, 0.5042rem + 3.5714vw, 3.5294rem); 
+    margin-bottom: clamp(1.1765rem, 0.5042rem + 3.5714vw, 3.5294rem);
     // решить вопрос с отступом фактически 70px, а надо 60px
 }
 
@@ -106,25 +106,29 @@
     border: #000000 1px dashed;
     padding: 10px;
 }
+
 .accor__item {
     max-width: 800px;
     margin-inline: auto;
     transition: .5s all;
     border-radius: 5px;
-    border: #000000 1px solid;
+    // border: #000000 1px solid;
     user-select: none;
+    box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
+}
 
+.accor__item:not(:last-child) {
+    margin-bottom: 20px;
 }
-.accor__item:not(:last-child){
-    margin-bottom: 10px;
-}
+
 .accor__item-trigger {
     // border: #000000 1px solid;
     padding: 15px;
-    text-align: center;
+    // text-align: right;
     // margin-bottom: 20px;
     cursor: pointer;
 }
+
 .accor__item-content {
     // border: #000000 1px solid;
     padding: 35px;
@@ -132,13 +136,36 @@
     // margin-bottom: 20px;
 }
 
-.accor__item_active{
+.accor__item_active {}
+
+.accor__item_active .accor__item-trigger {
+    // background-color: #1885f180;
+    // border-bottom: 1px solid rgb(0, 0, 0);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: #FFFFFF;
+    background: linear-gradient(273deg, #e3ee22, #c56c5e, #85c892, #cc983e);
+    background-size: 240% 240%;
+    animation: gradient-animation 20s ease infinite;
+
+
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
 }
-.accor__item_active .accor__item-trigger{
-    background-color: #1885f180;
-    border-bottom: 1px solid rgb(0, 0, 0);
-}
-.accor__item_active .accor__item-content{
+
+.accor__item_active .accor__item-content {
     display: block;
     // border-top: none;
 

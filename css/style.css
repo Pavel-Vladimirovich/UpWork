@@ -936,17 +936,16 @@ body {
   margin-inline: auto;
   transition: 0.5s all;
   border-radius: 5px;
-  border: #000000 1px solid;
   user-select: none;
+  box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
 }
 
 .accor__item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .accor__item-trigger {
   padding: 15px;
-  text-align: center;
   cursor: pointer;
 }
 
@@ -956,8 +955,23 @@ body {
 }
 
 .accor__item_active .accor__item-trigger {
-  background-color: rgba(24, 133, 241, 0.5019607843);
-  border-bottom: 1px solid rgb(0, 0, 0);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  color: #FFFFFF;
+  background: linear-gradient(273deg, #e3ee22, #c56c5e, #85c892, #cc983e);
+  background-size: 240% 240%;
+  animation: gradient-animation 20s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .accor__item_active .accor__item-content {
