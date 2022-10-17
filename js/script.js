@@ -32,10 +32,17 @@ for (let i = 0; i < acc.length; i++) {
 	});
   }
 
-
-let blocks = document.querySelectorAll('.block__item');
-blocks.forEach( function(elem, index){
+  document.querySelectorAll('.accor__item-trigger').forEach(elem => {
 	elem.addEventListener('click', ()=>{
-		elem.classList.toggle('active_block')
-	})
-})
+		let parent = elem.parentNode;
+		if(parent.classList.contains('accor__item_active')){
+			parent.classList.remove('accor__item_active')
+		}else{
+			document.querySelectorAll('.accor__item').forEach(item => {
+				item.classList.remove('accor__item_active')
+				parent.classList.add('accor__item_active');
+
+			})
+		}
+	  })
+  })
