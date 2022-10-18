@@ -108,13 +108,13 @@
 }
 
 .accor__item {
-    max-width: 800px;
+    max-width: 475px;
     margin-inline: auto;
-    transition: .5s all;
-    border-radius: 5px;
-    // border: #000000 1px solid;
+    // transition: .5s all;
     user-select: none;
+    background: #FFFFFF;
     box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
+    border-radius: 6px;
 }
 
 .accor__item:not(:last-child) {
@@ -122,51 +122,49 @@
 }
 
 .accor__item-trigger {
-    // border: #000000 1px solid;
-    padding: 15px;
-    // text-align: right;
-    // margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #001731;
+    opacity: 0.75;
+    padding: 25px;
     cursor: pointer;
+    transition: .3s all;
+    &:hover {
+        opacity: 1;
+    }
+    &:hover .img-svg {
+        fill-opacity: 1;
+    }
+}
+
+.img-svg {
+    transition: .3s;
 }
 
 .accor__item-content {
-    // border: #000000 1px solid;
-    padding: 35px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 190%;
+    letter-spacing: 0.02em;
+    color: rgba(0, 23, 49, 0.55);
+    padding: 10px 28px 36px 28px;
     display: none;
+    border: 1px solid #EDF1F6;
+    // animation: fade 0.4s ease;
     // margin-bottom: 20px;
 }
 
 .accor__item_active {}
 
 .accor__item_active .accor__item-trigger {
-    // background-color: #1885f180;
-    // border-bottom: 1px solid rgb(0, 0, 0);
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    color: #FFFFFF;
-    background: linear-gradient(273deg, #e3ee22, #c56c5e, #85c892, #cc983e);
-    background-size: 240% 240%;
-    animation: gradient-animation 20s ease infinite;
-
-
-    @keyframes gradient-animation {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
+    .img-svg {
+        fill-opacity: 1;
     }
-
+    opacity: 1;
 }
 
 .accor__item_active .accor__item-content {
     display: block;
-    // border-top: none;
-
 }
