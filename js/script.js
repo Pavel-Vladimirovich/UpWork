@@ -32,15 +32,15 @@ for (let i = 0; i < acc.length; i++) {
 	});
   }
 
-  document.querySelectorAll('.accor__item-trigger').forEach(elem => {
+  document.querySelectorAll('.accordion__item-trigger').forEach(elem => {
 	elem.addEventListener('click', ()=>{
 		let parent = elem.parentNode;
-		if(parent.classList.contains('accor__item_active')){
-			parent.classList.remove('accor__item_active')
+		if(parent.classList.contains('accordion__item_active')){
+			parent.classList.remove('accordion__item_active')
 		}else{
-			document.querySelectorAll('.accor__item').forEach(item => {
-				item.classList.remove('accor__item_active')
-				parent.classList.add('accor__item_active');
+			document.querySelectorAll('.accordion__item').forEach(item => {
+				item.classList.remove('accordion__item_active')
+				parent.classList.add('accordion__item_active');
 
 			})
 		}

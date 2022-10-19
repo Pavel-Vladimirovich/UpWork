@@ -9,8 +9,10 @@
 
 .features {
     display: flex;
+    // gap: 5%;
+    justify-content: space-between;
 
-    @media (max-width:1140px) {
+    @media (max-width:992px) {
         flex-direction: column;
     }
 
@@ -19,13 +21,78 @@
 .features__item_left {
     display: flex;
     flex-direction: column;
-    flex: 1 1 575px;
-    width: 100%;
-    margin-right: 10%;
+    flex: 1 1 475px;
+    // width: 100%;
+    // margin-right: 10%;
 
-    @media (max-width: 1140px) {
+    @media (max-width: 992px) {
         margin: 0px 0px 20px 0px;
-        flex-basis: auto;
+        // flex-basis: auto;
+    }
+
+    .accordion__item {
+        margin-inline: auto;
+        user-select: none;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 15px rgba(10, 21, 39, 0.1);
+        border-radius: 6px;
+    }
+    
+    .accordion__item:not(:last-child) {
+        margin-bottom: 14px;
+    }
+    
+    .accordion__item-trigger {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        // font-size: 20px;
+        font-size: clamp(1rem, 0.9496rem + 0.2679vw, 1.1765rem);
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #001731;
+        opacity: 0.75;
+        padding: 25px;
+        cursor: pointer;
+        transition: .3s all;
+    
+        &:hover {
+            opacity: 1;
+        }
+    
+        &:hover .img-svg {
+            fill-opacity: 1;
+        }
+    }
+    
+    .img-svg {
+        transition: .3s;
+    }
+    
+    .accordion__item-content {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 190%;
+        letter-spacing: 0.02em;
+        color: rgba(0, 23, 49, 0.55);
+        padding: 10px 28px 36px 28px;
+        display: none;
+        border-top: 1px solid #EDF1F6;    
+    }
+    
+    .accordion__item_active {
+    }
+    
+    .accordion__item_active .accordion__item-trigger {
+        .img-svg {
+            fill-opacity: 1;
+        }
+        opacity: 1;
+    }
+    
+    .accordion__item_active .accordion__item-content {
+        display: block;
     }
 }
 
@@ -35,62 +102,19 @@
 }
 
 .features__item__img {
-    // border: 2px solid rgb(15, 174, 47);
 
     & .features__img {
         object-fit: cover;
         max-width: 100%;
 
-        @media (max-width:1140px) {
+        @media (max-width:992px) {
             min-width: 100%;
         }
     }
 }
 
-.accordion {
-    flex: 1 0 auto;
-
-    & .accordion-item {
-        & .accordion-button {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 140%;
-            letter-spacing: -0.01em;
-            color: #001731;
-            opacity: 0.75;
-
-            @media (max-width: 1140px) {
-                font-size: clamp(0.8824rem, 0.7574rem + 0.6250vw, 1.1765rem);
-            }
-
-            &:hover {
-                opacity: 1;
-            }
-
-            &:focus {
-                color: #001731;
-                opacity: 1;
-
-            }
-        }
-
-        & .accordion-img {
-            padding-right: 10px;
-            width: 30px;
-            height: 30px;
-        }
-    }
-
-    & .accordion-body {
-        font-size: 16px;
-
-        @media (max-width: 1140px) {
-            font-size: clamp(0.8235rem, 0.7735rem + 0.2501vw, 0.9412rem);
-        }
-    }
-}
-
 .quote {
+    margin-top: 35px;
     .quote__item {
         display: flex;
         align-items: center;
@@ -98,7 +122,7 @@
         border-radius: 12px;
         min-height: 120px;
 
-        @media (max-width: 600px) {
+        @media (max-width: 480px) {
             flex-direction: column;
         }
     }
@@ -112,7 +136,7 @@
     }
 
     .quote__item__info {
-        @media (max-width: 600px) {
+        @media (max-width: 480px) {
             padding: 0px 15px 15px 15px;
         }
 
@@ -120,14 +144,10 @@
 
     .qoute__text {
         font-weight: 400;
-        font-size: 16px;
+        font-size: clamp(0.8235rem, 0.7776rem + 0.2440vw, 0.9412rem);
         line-height: 145%;
         color: #001731;
         opacity: 0.75;
-
-        @media (max-width: 1140px) {
-            font-size: clamp(0.8235rem, 0.7776rem + 0.2440vw, 0.9412rem);
-        }
     }
 
     .quote__author {
@@ -140,10 +160,6 @@
 .button__feature {
     padding: 15px 22px;
     margin-top: 35px;
-
-    @media (max-width: 450px) {
-        min-width: 100%;
-    }
 }
 
 
