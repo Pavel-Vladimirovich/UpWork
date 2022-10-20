@@ -4,7 +4,6 @@
 
 .question__header {
     margin-bottom: clamp(1.1765rem, 0.5042rem + 3.5714vw, 3.5294rem);
-    // решить вопрос с отступом фактически 70px, а надо 60px
 }
 
 .question__icon {
@@ -17,7 +16,6 @@
     // margin-bottom: 30px;
     margin-bottom: clamp(0.8824rem, 0.6303rem + 1.3392vw, 1.7647rem);
 
-    // https://html5css.ru/howto/howto_js_accordion.php
     .accordion {
         border: 1px solid #E5E5E5;
         border-radius: 12px;

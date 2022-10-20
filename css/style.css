@@ -292,11 +292,12 @@ body {
 }
 
 .section__features-title {
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0px;
 }
 
 .features {
   display: flex;
+  gap: 20px;
   justify-content: space-between;
 }
 @media (max-width: 992px) {
@@ -312,7 +313,7 @@ body {
 }
 @media (max-width: 992px) {
   .features__item_left {
-    margin: 0px 0px 20px 0px;
+    flex-basis: auto;
   }
 }
 .features__item_left .accordion__item {
@@ -370,12 +371,10 @@ body {
 
 .features__item_right {
   flex: 1 2 auto;
-  text-align: end;
 }
 
 .features__item__img .features__img {
-  object-fit: cover;
-  max-width: 100%;
+  width: 100%;
 }
 @media (max-width: 992px) {
   .features__item__img .features__img {
@@ -399,7 +398,7 @@ body {
   }
 }
 .quote .quote__item__img {
-  padding: 0px 7px 0px 15px;
+  margin: 0px 7px 0px 15px;
 }
 .quote .quote__item__img .quote__img {
   object-position: 0 -8px;
