@@ -9,91 +9,71 @@
   <meta name="keywords" content="Вёрстка макета с UpWork" />
   <link rel="shortcut icon" href="/img/icon/daisy.png" type="image/x-icon" sizes="any" />
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-    crossorigin="anonymous"></script>
-
   <title>UpWork</title>
 </head>
 
 <body class="page">
   <!-- Header -->
-  <header class="page__header">
-    <section class="section__header">
-      <div class="container-header">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="/img/__header/Logo.svg" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">How it works</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">FAQ</a>
-                </li>
-              </ul>
-              <select class="navbar__leng" id="">
-                <option class="navbar__option" value="ru">RU</option>
-                <option class="navbar__option" value="en">EN</option>
-              </select>
-              <div class="d-flex navbar__auth">
-                <button class="button navbar__buuton button_primary">
-                  Start free trial
-                </button>
-                <button class="button navbar__buuton button_secondary">Sign In</button>
-              </div>
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">
+        <svg class="header__icon" width="58" height="58">
+          <use href="#icon-header"></use>
+        </svg>
+      </a>
+      <div class="header__menu menu">
+        <div class="menu__icon">
+          <span></span>
+        </div>
+        <nav class="menu__body">
+          <div class="menu__body-item">
+            <ul class="menu__list">
+              <li><a data-goto=".page__section_1" href="#" class="menu__link">How it works</a></li>
+              <li><a data-goto=".page__section_2" href="#" class="menu__link">Pricing</a></li>
+              <li><a data-goto=".page__section_3" href="#" class="menu__link">About Us</a></li>
+              <li><a data-goto=".page__section_4" href="#" class="menu__link">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="menu__body-item">
+            <select class="menu__leng" id="">
+              <option class="menu__option" value="ru">RU</option>
+              <option class="menu__option" value="en">EN</option>
+            </select>
+            <div class="menu__button">
+              <button class="button">Start free trial</button>
+              <button class="button">Sign In</button>
             </div>
           </div>
         </nav>
-        <!--navbar-->
-        <section class="section__hero">
-          <div class="container__hero">
-            <div class="hero">
-              <h1 class="hero__title">
-                The most advanced <br> 5- cards Omaha Solvet for 6-max and HU
-              </h1>
-              <div class="hero__buttons">
-                <button class="button hero__button button_primary">Start now</button>
-                <span class="hero__text-between">or</span>
-                <button class="button hero__button button_secondary">
-                  Take a free tour
-                </button>
-              </div>
-              <p class="hero__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
-                eleifend tristique scelerisque eget.
-              </p>
-            </div>
-          </div>
-        </section>
-        <!--hero__section-->
-        <img class="header__ellips" src="/img/__header/Ellipse 28.png" alt="png" />
-        <img class="header__screen" src="/img/__header/Screen.png" alt="png" />
-
       </div>
-    </section>
-    <!--header-wrapper-->
+    </div>
   </header>
+  <!--navbar-->
+  <section class="section__hero">
+    <div class="container__hero">
+      <div class="hero">
+        <h1 class="hero__title">
+          The most advanced <br> 5- cards Omaha Solvet for 6-max and HU
+        </h1>
+        <div class="hero__buttons">
+          <button class="button hero__button button_primary">Start now</button>
+          <span class="hero__text-between">or</span>
+          <button class="button hero__button button_secondary">
+            Take a free tour
+          </button>
+        </div>
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+          eleifend tristique scelerisque eget.
+        </p>
+      </div>
+
+      <img class="hero__ellips" src="/img/__header/Ellipse 28.png" alt="png" />
+      <img class="hero__screen" src="/img/__header/Screen.png" alt="png" />
+
+    </div>
+  </section>
+  <!--hero__section-->
   <main class="page__main">
     <div class="container__main">
 
@@ -110,7 +90,8 @@
               <div class="story__item__text-container">
                 <h3 class="story__title title">Our story</h2>
                   <p class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat eleifend
-                    tristique scelerisque eget. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic voluptate,
+                    tristique scelerisque eget. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+                    voluptate,
                     asperiores modi sequi neque deserunt doloribus reiciendis dolorem rerum magnam impedit. Eius
                     veritatis
                     et corrupti? Aliquid eius amet corporis quam.</p>
@@ -137,29 +118,36 @@
                   <div class="accordion__item-trigger">
                     <div class="accordion__trigger__icon">
                       <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect class="img-svg" width="30" height="30" rx="6" fill="#001731" fill-opacity="0.3"/>
+                        <rect class="img-svg" width="30" height="30" rx="6" fill="#001731" fill-opacity="0.3" />
                         <g clip-path="url(#clip0_0_796)">
-                        <path d="M9.1665 12.5L6.6665 15L9.1665 17.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12.5 9.16675L15 6.66675L17.5 9.16675" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M17.5 20.8333L15 23.3333L12.5 20.8333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M20.8335 12.5L23.3335 15L20.8335 17.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M6.6665 15H23.3332" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M15 6.66675V23.3334" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9.1665 12.5L6.6665 15L9.1665 17.5" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M12.5 9.16675L15 6.66675L17.5 9.16675" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M17.5 20.8333L15 23.3333L12.5 20.8333" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M20.8335 12.5L23.3335 15L20.8335 17.5" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M6.6665 15H23.3332" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M15 6.66675V23.3334" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                         </g>
                         <defs>
-                        <clipPath id="clip0_0_796">
-                        <rect width="20" height="20" fill="white" transform="translate(5 5)"/>
-                        </clipPath>
+                          <clipPath id="clip0_0_796">
+                            <rect width="20" height="20" fill="white" transform="translate(5 5)" />
+                          </clipPath>
                         </defs>
-                        </svg>
-                        
+                      </svg>
+
                     </div>
                     <div class="accordion__trigger__text">
                       Game Selection and Preflop Action
                     </div>
                   </div>
                   <div class="accordion__item-content">
-                    Lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, suscipit! m ipsum dolor sit. Lorem
+                    Lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, suscipit! m ipsum dolor sit.
+                    Lorem
                     ipsum dolor sit amet.
                   </div>
                 </div>
@@ -167,26 +155,30 @@
                   <div class="accordion__item-trigger">
                     <div class="accordion__trigger__icon">
                       <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect class="img-svg" width="30" height="30" rx="6" fill="#001731" fill-opacity="0.3"/>
+                        <rect class="img-svg" width="30" height="30" rx="6" fill="#001731" fill-opacity="0.3" />
                         <g clip-path="url(#clip0_0_811)">
-                        <path d="M14.9998 6.66675L6.6665 10.8334L14.9998 15.0001L23.3332 10.8334L14.9998 6.66675Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M6.6665 19.1667L14.9998 23.3334L23.3332 19.1667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M6.6665 15L14.9998 19.1667L23.3332 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14.9998 6.66675L6.6665 10.8334L14.9998 15.0001L23.3332 10.8334L14.9998 6.66675Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M6.6665 19.1667L14.9998 23.3334L23.3332 19.1667" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M6.6665 15L14.9998 19.1667L23.3332 15" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
                         </g>
                         <defs>
-                        <clipPath id="clip0_0_811">
-                        <rect width="20" height="20" fill="white" transform="translate(5 5)"/>
-                        </clipPath>
+                          <clipPath id="clip0_0_811">
+                            <rect width="20" height="20" fill="white" transform="translate(5 5)" />
+                          </clipPath>
                         </defs>
-                        </svg>
-                        
+                      </svg>
+
                     </div>
                     <div class="accordion__trigger__text">
                       Browse Solutions for player to act
                     </div>
                   </div>
                   <div class="accordion__item-content">
-                    Lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, suscipit! m ipsum dolor sit. Lorem
+                    Lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, suscipit! m ipsum dolor sit.
+                    Lorem
                     ipsum dolor sit amet.
                   </div>
                 </div>
@@ -205,7 +197,8 @@
                     </div>
                   </div>
                   <div class="accordion__item-content">
-                    Lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, suscipit! m ipsum dolor sit. Lorem
+                    Lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, suscipit! m ipsum dolor sit.
+                    Lorem
                     ipsum dolor sit amet.
                   </div>
                 </div>
@@ -216,7 +209,8 @@
                     <img class="quote__img" src="/img/__features/poker-chips 1.png" alt="quote">
                   </div>
                   <div class="quote__item__info">
-                    <div class="qoute__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat eleifend
+                    <div class="qoute__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+                      eleifend
                       tristique scelerisque eget.</div>
                     <div class="quote__author">Antonio A.</div>
                   </div>
@@ -312,32 +306,39 @@
                 <li class="price__list-item">
                   <div class="price__list-item--img"><img src="/img/__pricing/pricing__card__pro.svg" alt="img"></div>
                   <div class="price__list-item--text">Preflop sims with flop sims</div>
-                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img"></div>
+                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img">
+                  </div>
                 </li>
                 <li class="price__list-item">
                   <div class="price__list-item--img"><img src="/img/__pricing/pricing__card__pro.svg" alt="img"></div>
                   <div class="price__list-item--text">Flop aggregared report</div>
-                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img"></div>
+                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img">
+                  </div>
                 </li>
                 <li class="price__list-item">
                   <div class="price__list-item--img"><img src="/img/__pricing/pricing__card__pro.svg" alt="img"></div>
                   <div class="price__list-item--text">Multiple preflop sims</div>
-                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img"></div>
+                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img">
+                  </div>
                 </li>
                 <li class="price__list-item">
-                  <div class="price__list-item--img"><img src="/img/__pricing/pricing__coins__pro.svg" alt="img"></div>
+                  <div class="price__list-item--img"><img src="/img/__pricing/pricing__coins__pro.svg" alt="img">
+                  </div>
                   <div class="price__list-item--text">Many stack sizes</div>
-                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img"></div>
+                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img">
+                  </div>
                 </li>
                 <li class="price__list-item">
                   <div class="price__list-item--img"><img src="/img/__pricing/pricing__message.svg" alt="img"></div>
                   <div class="price__list-item--text">500 calculations</div>
-                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img"></div>
+                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img">
+                  </div>
                 </li>
                 <li class="price__list-item">
                   <div class="price__list-item--img"><img src="/img/__pricing/pricing__card__pro.svg" alt="img"></div>
                   <div class="price__list-item--text">100bbs</div>
-                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img"></div>
+                  <div class="price__list-item--icon"><img src="/img/__pricing/pricing__info__pro.svg" alt="img">
+                  </div>
                 </li>
               </ul>
             </div>
@@ -509,7 +510,8 @@
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                 aliquip ex
                 ea commodo consequat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. In incidunt commodi
-                voluptatibus ex delectus, similique voluptatem. Voluptas atque quas, delectus distinctio, dicta ducimus
+                voluptatibus ex delectus, similique voluptatem. Voluptas atque quas, delectus distinctio, dicta
+                ducimus
                 vel, blanditiis fugiat eligendi veritatis officiis vero!</p>
             </div>
             <button class="accordion">I play with different rake structure or use different bet sizings. Will PLO5
