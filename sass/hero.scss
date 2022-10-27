@@ -1,10 +1,7 @@
-.section__hero {
-  // position: relative;
-  // z-index: 5;
-}
+.section__hero {}
 
 
-.container__hero{
+.container__hero {
   max-width: 1440px;
   margin-inline: auto;
   background: #001731;
@@ -12,8 +9,6 @@
   position: relative;
   overflow: hidden;
 }
-
-
 
 .hero {
   margin-top: 114px;
@@ -29,7 +24,7 @@
   &__title {
     font-weight: 700;
     // font-size: 72px;
-    font-size: clamp(1.8824rem, 1.2101rem + 3.5714vw, 4.2353rem); 
+    font-size: clamp(1.8824rem, 1.2101rem + 3.5714vw, 4.2353rem);
     line-height: 95%;
     letter-spacing: -0.03em;
     color: #ffffff;
