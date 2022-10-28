@@ -12,11 +12,14 @@ li {
   list-style: none;
 }
 
+
+
 // ===========================общие стили colors================================
 $primary-color: #ffffff;
 $secondary-color: #398bff;
 $secondary-color-hover: #1760c5;
 
+// =============================body=============================================
 body {
   font-family: 'Gilroy';
   color: $primary-color;
@@ -31,13 +34,17 @@ body._lock {
 }
 
 // ===========================ограничивающий container-work=======================
-.container-work {
+.container {
   max-width: 1440px;
   margin-inline: auto;
   padding-left: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
   padding-right: clamp(1.17rem, 0.0757rem + 5.8134vw, 5rem);
 }
-
+.container_background-dark {
+	background: #031E3E;
+	padding-top: clamp(1.5294rem, 1.0252rem + 2.6786vw, 3.2941rem);
+	padding-bottom: 26px;
+}
 // ========================общие стили button===================================
 
 .button {
@@ -57,7 +64,6 @@ body._lock {
 %button_style_primary {
   color: $primary-color;
   background: $secondary-color;
-  // border: 3px solid rgba(0, 105, 253, 0.752);
   border-style: none;
   border-radius: 4px;
   transition: .3s all;
@@ -69,9 +75,6 @@ body._lock {
     background: $secondary-color-hover;
   }
 
-  @media (max-width: 576px) {
-    min-width: 100%;
-  }
 }
 
 %button_style_secondary {

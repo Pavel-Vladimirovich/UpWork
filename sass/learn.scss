@@ -44,4 +44,8 @@
 .learn__button {
     display: inline-block;
     padding: 15px 22px;
+
+    @media (max-width: 576px) {
+        min-width: 100%;
+      }
 }

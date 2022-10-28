@@ -155,4 +155,8 @@
 .button__feature {
     padding: 15px 22px;
     margin-top: 35px;
+
+    @media (max-width: 576px) {
+        min-width: 100%;
+    }
 }
