@@ -79,10 +79,13 @@
     .panel {
         font-size: clamp(0.8235rem, 0.7899rem + 0.1787vw, 0.9412rem);
         background: #FFFFFF;
-        padding: 15px 18px 0px 18px;
+        color: #001731;
+        opacity: 0.75;
+        padding: 10px 18px 0px 18px;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
+        margin-bottom: 10px;
     }
 }
 
@@ -93,6 +96,3 @@
     font-size: clamp(0.9412rem, 0.8740rem + 0.3572vw, 1.1765rem);
     color: #737F8E;
 }
-
-
-

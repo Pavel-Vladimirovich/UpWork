@@ -1,5 +1,5 @@
+
 // Menu Burger =========================================
-// меню бургер
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
 if (iconMenu) {
@@ -10,7 +10,7 @@ if (iconMenu) {
     });
 }
 
-// прокрутка при клике
+// Прокрутка при клике =================================
 
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
@@ -85,3 +85,14 @@ for (let i = 0; i < acc.length; i++) {
 		}
 	  })
   })
+
+
+const param = {
+	hour: 'numeric',
+	minute: 'numeric',
+	day: 'numeric',
+	month: 'numeric',
+	weekday: 'short'
+}
+const date = new Date();
+console.log(date.toLocaleString(param));
