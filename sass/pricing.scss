@@ -10,13 +10,13 @@
     align-items: center;
     margin-bottom: 47px;
 
-    @media (max-width: 900px) {
-        gap: 0px;
+    @media (max-width: 768px) {
+        // gap: 10px;
         margin-bottom: 20px;
     }
 
     .pricing__header-item {
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
             min-width: 100%;
         }
 
@@ -253,7 +253,7 @@
         line-height: 37px;
         text-transform: uppercase;
         padding-left: 12px;
-        background: url('img/pricing/marker.svg');
+        background: url('/img/pricing/marker.svg');
         width: 166px;
         height: 37px;
         position: absolute;

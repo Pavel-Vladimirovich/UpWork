@@ -226,26 +226,26 @@ body._lock {
 @media (max-width: 767px) {
   .menu__body {
     position: fixed;
-    top: -100%;
-    left: 0;
+    top: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
     background-color: rgba(3, 30, 62, 0.99);
     padding: 100px 30px 30px 30px;
-    transition: top 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
     overflow: auto;
   }
   .menu__body._active {
-    top: 0;
+    left: 0;
   }
   .menu__body._active::before {
-    top: 0;
+    left: 0;
   }
   .menu__body::before {
     content: "";
     position: fixed;
-    top: -100%;
-    left: 0;
+    top: 0;
+    left: -100%;
     width: 100%;
     height: 70px;
     background-color: #001731;
@@ -303,6 +303,11 @@ body._lock {
 .menu__leng {
   width: 50px;
   height: 40px;
+  background: #001731;
+  color: #ffffff;
+}
+.menu__leng:focus {
+  border-style: none;
 }
 @media (min-width: 767px) {
   .menu__leng {
@@ -313,6 +318,15 @@ body._lock {
   .menu__leng {
     margin-top: 25px;
   }
+}
+
+.menu__option {
+  border-style: none;
+  border-radius: 4px;
+  color: red;
+}
+.menu__option:active, .menu__option:focus {
+  border-style: 1px solid red;
 }
 
 .menu__button {
@@ -359,7 +373,7 @@ body._lock {
 .hero__buttons .hero__button {
   padding: 15px 22px;
 }
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .hero__buttons {
     display: flex;
     flex-direction: column;
@@ -374,7 +388,7 @@ body._lock {
   line-height: 145%;
   color: rgba(255, 255, 255, 0.35);
 }
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .hero__buttons .hero__text-between {
     display: none;
   }
@@ -635,7 +649,7 @@ body._lock {
   padding: 15px 22px;
   margin-top: 35px;
 }
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .button__feature {
     min-width: 100%;
   }
@@ -653,13 +667,12 @@ body._lock {
   align-items: center;
   margin-bottom: 47px;
 }
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .pricing__header {
-    gap: 0px;
     margin-bottom: 20px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .pricing__header .pricing__header-item {
     min-width: 100%;
   }
@@ -873,7 +886,7 @@ body._lock {
   line-height: 37px;
   text-transform: uppercase;
   padding-left: 12px;
-  background: url("img/pricing/marker.svg");
+  background: url("/img/pricing/marker.svg");
   width: 166px;
   height: 37px;
   position: absolute;
@@ -971,7 +984,7 @@ body._lock {
   display: inline-block;
   padding: 15px 22px;
 }
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .learn__button {
     min-width: 100%;
   }
@@ -1178,9 +1191,6 @@ body._lock {
   }
 }
 
-.footer__list {
-  margin-bottom: 0px;
-}
 .footer__list .footer__list-title {
   margin-bottom: 24px;
   font-weight: 600;

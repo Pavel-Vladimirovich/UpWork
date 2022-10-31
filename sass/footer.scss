@@ -25,7 +25,6 @@
 }
 
 .footer__list {
-	margin-bottom: 0px;
 
 	.footer__list-title {
 		margin-bottom: 24px;
@@ -47,8 +46,6 @@
 		text-decoration: none;
 	}
 }
-
-.footer__form {}
 
 .footer__title {
 	font-weight: 600;
@@ -124,6 +121,4 @@
 	display: flex;
 	gap: clamp(1.0588rem, 0.8907rem + 0.8930vw, 1.6471rem);
 	margin-bottom: 0px;
-
-	.copy__list-item {}
 }
