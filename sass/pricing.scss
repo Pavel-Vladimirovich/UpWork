@@ -11,7 +11,6 @@
     margin-bottom: 47px;
 
     @media (max-width: 768px) {
-        // gap: 10px;
         margin-bottom: 20px;
     }
 
@@ -146,11 +145,6 @@
         letter-spacing: -0.03em;
         color: #001731;
         margin-bottom: 17px;
-
-        @media (max-width: 1140px) {
-            // font-size: clamp(1.7647rem, 1.4489rem + 1.5790vw, 2.4706rem);
-        }
-
 
     span {
         font-weight: 600;
@@ -296,7 +290,7 @@
 }
 
 .price__item-subname {
-    margin-top: 55px; // I don't shure
+    margin-top: 55px;
     margin-bottom: 8px;
     font-weight: 700;
     font-size: 36px;

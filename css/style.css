@@ -129,10 +129,6 @@ body._lock {
   unicode-range: U+0020-00FE;
 }
 .header {
-  position: relative;
-  z-index: 10;
-  top: 0;
-  left: 0;
   width: 100%;
 }
 
@@ -158,6 +154,9 @@ body._lock {
 .header__logo .header__icon {
   fill: white;
   transition: all 0.3s;
+  position: relative;
+  top: 5px;
+  left: 0;
 }
 .header__logo .header__icon:hover {
   fill: rgb(187, 187, 187);
@@ -303,11 +302,8 @@ body._lock {
 .menu__leng {
   width: 50px;
   height: 40px;
-  background: #001731;
+  background-color: #001731;
   color: #ffffff;
-}
-.menu__leng:focus {
-  border-style: none;
 }
 @media (min-width: 767px) {
   .menu__leng {
@@ -317,16 +313,8 @@ body._lock {
 @media (max-width: 767px) {
   .menu__leng {
     margin-top: 25px;
+    background-color: rgba(3, 30, 62, 0.99);
   }
-}
-
-.menu__option {
-  border-style: none;
-  border-radius: 4px;
-  color: red;
-}
-.menu__option:active, .menu__option:focus {
-  border-style: 1px solid red;
 }
 
 .menu__button {
@@ -627,6 +615,9 @@ body._lock {
 .quote .quote__item__img .quote__img {
   object-position: 0 -8px;
 }
+.quote .quote__item__info {
+  padding: 10px;
+}
 @media (max-width: 480px) {
   .quote .quote__item__info {
     padding: 0px 15px 15px 15px;
@@ -640,6 +631,7 @@ body._lock {
   opacity: 0.75;
 }
 .quote .quote__author {
+  color: #001731;
   margin-top: 8px;
   font-size: 14px;
   font-weight: 700;

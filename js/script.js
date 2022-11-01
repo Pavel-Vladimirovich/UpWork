@@ -86,13 +86,3 @@ for (let i = 0; i < acc.length; i++) {
 	  })
   })
 
-
-const param = {
-	hour: 'numeric',
-	minute: 'numeric',
-	day: 'numeric',
-	month: 'numeric',
-	weekday: 'short'
-}
-const date = new Date();
-console.log(date.toLocaleString(param));
